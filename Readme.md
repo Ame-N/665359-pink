@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Елизавета Дорджеева](https://up.htmlacademy.ru/adaptive/15/user/665359).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Оксанич](https://htmlacademy.ru/profile/oksanych).
 
 ---
 
