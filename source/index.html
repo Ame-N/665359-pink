@@ -26,7 +26,7 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="intro">
+      <section class="intro intro--index">
         <a href="https://itunes.apple.com/" class="intro__btn-download">Скачать приложение</a>
         <div class="intro__store-icons">
           <a href="https://itunes.apple.com/"><img src="" alt="App Store" class="intro__store-icon intro__store-icon--apple"></a>
@@ -40,20 +40,23 @@
           <p>Устали от серости мегаполиса?</p>
           <p>Нам есть, что вам предложить!</p>
         </header>
-        <ul class="about__features">
+        <ul class="about__features features">
           <li class="features__item">
             <h3 class="features__name">Поднимает настроение</h3>
-            <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
           <li class="features__item">
             <h3 class="features__name">Меняет мир вокруг</h3>
-            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
           <li class="features__item">
             <h3 class="features__name">Заводит новых друзей</h3>
-            <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
+        <div class="about__phone">
+          <img class="about__phone-img" src="" alt="Приложение на телефоне">
+        </div>
       </section>
       <section class="reviews">
         <div class="reviews__wrapper slider">
@@ -80,7 +83,7 @@
       </section>
       <section class="prices">
         <div class="prices__wrapper slider">
-          <table class="prices__table">
+          <table class="prices__table slider__list">
             <tr>
               <td class="prices__tariff">
                 <h3 class="prices__name">База</h3>
@@ -96,19 +99,19 @@
               </td>
             </tr>
             <tr>
-              <td>Розовый фильтр<span class="prices__checked"></span></td>
-              <td>Розовый фильтр<span class="prices__checked"></span></td>
-              <td>Розовый фильтр<span class="prices__checked"></span></td>
+              <td>Розовый фильтр<span class="prices__icon--checked"></span></td>
+              <td>Розовый фильтр<span class="prices__icon--checked"></span></td>
+              <td>Розовый фильтр<span class="prices__icon--checked"></span></td>
             </tr>
             <tr>
-              <td>Смайлики<span class="prices__unchecked"></span></td>
-              <td>Смайлики<span class="prices__checked"></span></td>
-              <td>Смайлики<span class="prices__checked"></span></td>
+              <td>Смайлики<span class="prices__icon--unchecked"></span></td>
+              <td>Смайлики<span class="prices__icon--checked"></span></td>
+              <td>Смайлики<span class="prices__icon--checked"></span></td>
             </tr>
             <tr>
-              <td>Комментарии<span class="prices__unchecked"></span></td>
-              <td>Комментарии<span class="prices__unchecked"></span></td>
-              <td>Комментарии<span class="prices__checked"></span></td>
+              <td>Комментарии<span class="prices__icon--unchecked"></span></td>
+              <td>Комментарии<span class="prices__icon--unchecked"></span></td>
+              <td>Комментарии<span class="prices__icon--checked"></span></td>
             </tr>
           </table>
           <p class="prices__toggles slider__toggles">
@@ -121,17 +124,17 @@
       <section class="contacts">
         <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
         <ul class="contacts__contacts-list">
-          <li class="contacts__contact">
-            <b class="contacts__method">Звоните:</b>
-            <p class="contacts__info">+7 (812) 555-66-66</p>
+          <li class="contact contacts__contact">
+            <b class="contact__method">Звоните:</b>
+            <p class="contact__info">+7 (812) 555-66-66</p>
           </li>
-          <li class="contacts__contact">
-            <b class="contacts__method">Пишите:</b>
-            <p class="contacts__info"><a class="contacts__mail-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          <li class="contact contacts__contact">
+            <b class="contact__method">Пишите:</b>
+            <p class="contact__info"><a class="contact__mail-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
           </li>
-          <li class="contacts__contact">
-            <b class="contacts__method">Приезжайте в гости:</b>
-            <p class="contacts__info">ул. Большая Конюшенная, 19/8</p>
+          <li class="contact contacts__contact">
+            <b class="contact__method">Приезжайте в гости:</b>
+            <p class="contact__info">ул. Большая Конюшенная, 19/8</p>
           </li>
         </ul>
         <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A306cba3031a276a8dae489041e4b55db267f68944eb10754191d0ee8c91f2abf&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>

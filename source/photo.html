@@ -31,7 +31,7 @@
       </section>
       <section class="photos">
         <p class="photos__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        <div class="photos__photo photo photo--panoram">
+        <div class="photo photo--panoram photos__photo">
           <a href="#">
             <img src="" alt="Фото" class="photo__img photo__img--panoram photo__img--day-panoram">
           </a>
@@ -42,7 +42,7 @@
             <p class="photo__likes">Нравится: 215</p>
           </div>
         </div>
-        <div class="photos__photo photo">
+        <div class="photo photos__photo">
           <a href="#">
             <img src="" alt="Фото" class="photo__img">
           </a>
@@ -53,7 +53,7 @@
             <p class="photo__likes">Нравится: 356</p>
           </div>
         </div>
-        <div class="photos__photo photo">
+        <div class="photo photos__photo">
           <a href="#">
             <img src="" alt="Фото" class="photo__img">
           </a>
@@ -64,7 +64,7 @@
             <p class="photo__likes">Нравится: 666</p>
           </div>
         </div>
-        <div class="photos__photo photo">
+        <div class="photo photos__photo">
           <a href="#">
             <img src="" alt="Фото" class="photo__img">
           </a>
@@ -75,7 +75,7 @@
             <p class="photo__likes">Нравится: 215</p>
           </div>
         </div>
-        <div class="photos__photo photo">
+        <div class="photo photos__photo">
           <a href="#">
             <img src="" alt="Фото" class="photo__img">
           </a>
@@ -86,7 +86,7 @@
             <p class="photo__likes">Нравится: 4</p>
           </div>
         </div>
-        <div class="photos__photo photo">
+        <div class="photo photos__photo">
           <a href="#">
             <img src="" alt="Фото" class="photo__img">
           </a>
@@ -97,7 +97,7 @@
             <p class="photo__likes">Нравится: 150</p>
           </div>
         </div>
-        <div class="photos__photo photo">
+        <div class="photo photos__photo">
           <a href="#">
             <img src="" alt="Фото" class="photo__img">
           </a>
@@ -114,30 +114,30 @@
         <form class="photo-editor__editor editor" action="" method="post">
           <img class="editor__img" src="" alt="Ваша фотография">
           <label class="editor__icon editor__icon--clip" for="clip">Обрезка</label>
-          <input class="editor__range" type="range" id="clip">
+          <input class="editor__range" type="range" id="clip" min="0" max="100" step="1">
           <label class="editor__icon editor__icon--color" for="color">Цвет</label>
-          <input class="editor__range" type="range" id="color">
+          <input class="editor__range" type="range" id="color" min="0" max="100" step="1">
           <label class="editor__icon editor__icon--brightness" for="brightness">Яркость</label>
-          <input class="editor__range" type="range" id="brightness">
+          <input class="editor__range" type="range" id="brightness" min="0" max="100" step="1">
           <input class="editor__submit-btn btn" type="submit" value="Запостить">
           <input class="editor__reset-btn btn" type="reset" value="Отмена">
         </form>
       </section>
-      <footer class="page-footer">
-        <img src="" alt="Пинк" class="page-footer__logo">
-        <ul class="page-footer__social social">
-          <li class="social__social-item">
-            <a href="https://twitter.com/" class="social__social-link">Twitter</a>
-          </li>
-          <li class="social__social-item">
-            <a href="https://facebook.com/" class="social__social-link">Facebook</a>
-          </li>
-          <li class="social__social-item">
-            <a href="https://www.youtube.com/" class="social__social-link">YouTube</a>
-          </li>
-        </ul>
-        <p class="page-footer__copyright">Разработано <a class="page-footer__developer-logo" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a></p>
-      </footer>
     </main>
+    <footer class="page-footer">
+      <img src="" alt="Пинк" class="page-footer__logo">
+      <ul class="page-footer__social social">
+        <li class="social__social-item">
+          <a href="https://twitter.com/" class="social__social-link">Twitter</a>
+        </li>
+        <li class="social__social-item">
+          <a href="https://facebook.com/" class="social__social-link">Facebook</a>
+        </li>
+        <li class="social__social-item">
+          <a href="https://www.youtube.com/" class="social__social-link">YouTube</a>
+        </li>
+      </ul>
+      <p class="page-footer__copyright">Разработано <a class="page-footer__developer-logo" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a></p>
+    </footer>
   </body>
 </html>
