@@ -1,0 +1,41 @@
+.textarea {
+  text-align: center;
+}
+
+.textarea__label {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.textarea__input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  padding: 22px;
+  border: 2px solid #e5e5e5;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    .text-headers(normal);
+    color: @color-main;
+    line-height: 30px;
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
+
+  &::-moz-placeholder {
+    .text-headers(normal);
+    color: @color-main;
+    line-height: 30px;
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
+
+  &:-ms-input-placeholder {
+    .text-headers(normal);
+    color: @color-main;
+    line-height: 30px;
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
+}

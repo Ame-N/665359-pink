@@ -1,0 +1,30 @@
+.popup {
+  position: absolute;
+  background-color: @color-white;
+  top: 50%;
+  left: 0;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
+  padding-top: 46px;
+}
+
+.popup__title {
+  display: block;
+  .text-headers();
+  text-align: center;
+}
+
+.popup__text {
+  .text-regular();
+  text-align: center;
+  line-height: 24px;
+}
+
+.popup__action-bar {
+  padding-top: 48px;
+  padding-bottom: 52px;
+  background-color: @color-grey;
+}
+
+.popup__action-bar--no-action {
+  background-color: @color-white;
+}

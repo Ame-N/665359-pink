@@ -2,38 +2,46 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="page-header__logo">Pink</a>
-      <button class="page-header__nav-toggle" type="button">Открыть меню</button>
+      <div class="page-header__main-bar wrapper">
+        <a href="index.html">
+          <img class="logo logo--small page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="22">
+        </a>
+        <button class="page-header__nav-toggle" type="button">Открыть меню</button>
+      </div>
       <nav class="page-header__nav">
         <ul class="main-nav">
           <li class="main-nav__item">
-            <a href="index.html">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Фотографии</a>
+            <a class="main-nav__link" href="#">Фотографии</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">Конкурс</a>
+            <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a>
+            <a class="main-nav__link" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
       <section class="intro">
-        <h1 class="intro__page-title">Фотографии пользователей</h1>
+        <div class="wrapper">
+          <h1 class="intro__page-title">Фотографии пользователей</h1>
+        </div>
       </section>
-      <section class="photos">
+      <section class="photos wrapper">
         <p class="photos__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        <div class="photo photo--panoram photos__photo">
-          <a href="#">
-            <img src="http://placehold.it/320x137" alt="Фото" class="photo__img photo__img--panoram photo__img--day-panoram">
+        <div class="photo photo--dayly photos__photo">
+          <a class="photo__panoram" href="#">
+            <img class="photo__img" src="img/panorama-mobile@1x.jpg" alt="Фото">
           </a>
           <div class="photo__wrapper">
             <cite class="photo__author">Анна</cite>
@@ -44,7 +52,7 @@
         </div>
         <div class="photo photos__photo">
           <a href="#">
-            <img src="http://placehold.it/280x137" alt="Фото" class="photo__img">
+            <img class="photo__img" src="img/photo-car-mobile@1x.jpg" alt="Фото">
           </a>
           <div class="photo__wrapper">
             <cite class="photo__author">Левон</cite>
@@ -55,7 +63,7 @@
         </div>
         <div class="photo photos__photo">
           <a href="#">
-            <img src="http://placehold.it/280x137" alt="Фото" class="photo__img">
+            <img class="photo__img" src="img/photo-drumset-mobile@1x.jpg" alt="Фото">
           </a>
           <div class="photo__wrapper">
             <cite class="photo__author">Антон</cite>
@@ -66,7 +74,7 @@
         </div>
         <div class="photo photos__photo">
           <a href="#">
-            <img src="http://placehold.it/280x137" alt="Фото" class="photo__img">
+            <img class="photo__img" src="img/photo-window-mobile@1x.jpg" alt="Фото">
           </a>
           <div class="photo__wrapper">
             <cite class="photo__author">Борис</cite>
@@ -77,7 +85,7 @@
         </div>
         <div class="photo photos__photo">
           <a href="#">
-            <img src="http://placehold.it/280x137" alt="Фото" class="photo__img">
+            <img class="photo__img" src="img/photo-fair-mobile@1x.jpg" alt="Фото">
           </a>
           <div class="photo__wrapper">
             <cite class="photo__author">Сергей</cite>
@@ -88,7 +96,7 @@
         </div>
         <div class="photo photos__photo">
           <a href="#">
-            <img src="http://placehold.it/280x137" alt="Фото" class="photo__img">
+            <img class="photo__img" src="img/photo-pov-mobile@1x.jpg" alt="Фото">
           </a>
           <div class="photo__wrapper">
             <cite class="photo__author">Максим</cite>
@@ -99,7 +107,7 @@
         </div>
         <div class="photo photos__photo">
           <a href="#">
-            <img src="http://placehold.it/280x137" alt="Фото" class="photo__img">
+            <img class="photo__img" src="img/photo-wing-mobile@1x.jpg" alt="Фото">
           </a>
           <div class="photo__wrapper">
             <cite class="photo__author">Надежда</cite>
@@ -112,29 +120,35 @@
       </section>
       <section class="photo-editor">
         <form class="photo-editor__editor editor" action="https://echo.htmlacademy.ru" method="post">
-          <img class="editor__img" src="http://placehold.it/280x374" alt="Ваша фотография">
-          <label class="editor__icon editor__icon--clip" for="clip">Обрезка</label>
-          <input class="editor__range" type="range" id="clip" name="clip" min="0" max="100" step="1">
-          <label class="editor__icon editor__icon--color" for="color">Цвет</label>
-          <input class="editor__range" type="range" id="color" name="color" min="0" max="100" step="1">
-          <label class="editor__icon editor__icon--brightness" for="brightness">Яркость</label>
-          <input class="editor__range" type="range" id="brightness" name="brightness" min="0" max="100" step="1">
-          <input class="editor__submit-btn btn" type="submit" value="Запостить">
-          <input class="editor__reset-btn btn" type="reset" value="Отмена">
+          <div class="editor__main-controls wrapper">
+            <img class="editor__img" src="img/photo-road-mobile@1x.jpg" alt="Ваша фотография">
+            <div class="editor__label-group">
+              <label class="editor__icon editor__icon--clip" for="clip">Обрезка</label>
+              <label class="editor__icon editor__icon--color" for="color">Цвет</label>
+              <label class="editor__icon editor__icon--contrast" for="brightness">Яркость</label>
+            </div>
+            <input class="editor__range" type="range" id="clip" name="clip" min="0" max="100" step="1">
+            <input class="editor__range" type="range" id="color" name="color" min="0" max="100" step="1" hidden>
+            <input class="editor__range" type="range" id="brightness" name="brightness" min="0" max="100" step="1" hidden>
+          </div>
+          <div class="editor__action-bar wrapper">
+            <input class="editor__submit-btn btn" type="submit" value="Запостить">
+            <input class="editor__reset-btn btn" type="reset" value="Отмена">
+          </div>
         </form>
       </section>
     </main>
     <footer class="page-footer">
-      <img class="page-footer__logo" src="http://placehold.it/147x40" alt="Пинк">
+      <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк">
       <ul class="page-footer__social social">
-        <li class="social__social-item">
-          <a href="https://twitter.com/" class="social__social-link">Twitter</a>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/">Twitter</a>
         </li>
-        <li class="social__social-item">
-          <a href="https://facebook.com/" class="social__social-link">Facebook</a>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://facebook.com/">Facebook</a>
         </li>
-        <li class="social__social-item">
-          <a href="https://www.youtube.com/" class="social__social-link">YouTube</a>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/">YouTube</a>
         </li>
       </ul>
       <p class="page-footer__copyright">Разработано <a class="page-footer__developer-logo" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a></p>

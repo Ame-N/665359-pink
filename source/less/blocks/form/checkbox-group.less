@@ -1,0 +1,36 @@
+.checkbox-group {
+  .text-headers(normal);
+  display: block;
+  position: relative;
+  padding: 8px 0 8px 60px;
+  margin-bottom: 40px;
+}
+
+.checkbox-group__input {
+  width: 0;
+  height: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+  }
+
+  &:checked::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 17px;
+    height: 7px;
+    background-color: transparent;
+    border-bottom: 2px solid @color-pink;
+    border-left: 2px solid @color-pink;
+    transform: rotate(-45deg);
+  }
+}
