@@ -1,7 +1,5 @@
 .social {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .reset-list();
   display: flex;
   justify-content: center;
   font-size: 0;
@@ -18,7 +16,7 @@
   height: inherit;
   display: block;
   background: @color-white center no-repeat;
-  border: 3px solid #e9ebec;
+  border: 3px solid @color-social-borders;
   border-radius: 50%;
 
   &--twitter {

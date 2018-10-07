@@ -7,6 +7,7 @@
     position: relative;
 
     &::after {
+      .text-small(bold);
       content: "Панорама дня";
       position: absolute;
       box-sizing: border-box;
@@ -16,7 +17,6 @@
       top: 0;
       text-align: center;
       background-color: @color-pink;
-      .text-small(bold);
       text-transform: uppercase;
       color: @color-white;
     }
@@ -33,8 +33,8 @@
 }
 
 .photo__author {
-  margin: 0;
   .text-headers();
+  margin: 0;
   font-size: 14px;
   font-style: normal;
   line-height: 24px;
@@ -46,14 +46,14 @@
 }
 
 .photo__text {
+  .text-regular();
   margin: 0;
   margin-bottom: 20px;
-  .text-regular();
   line-height: 24px;
 }
 
 .photo__likes {
-  margin: 0;
   .text-small();
+  margin: 0;
   color: @color-pink;
 }

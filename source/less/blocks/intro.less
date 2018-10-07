@@ -1,9 +1,9 @@
 .intro {
+  .text-large();
   padding-top: 35px;
-  background-color: #1d2631;
+  background-color: @color-main-dark;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  .text-large();
   color: @color-white;
   min-height: 170px;
 
@@ -23,11 +23,9 @@
 }
 
 .intro__download-list {
+  .reset-list();
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
   font-size: 0;
 }
 
@@ -63,7 +61,7 @@
 }
 
 .intro__page-title {
-  margin: 0;
   .text-large();
+  margin: 0;
   text-align: center;
 }
