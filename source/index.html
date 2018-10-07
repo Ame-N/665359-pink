@@ -2,32 +2,38 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a href="#" class="page-header__logo">Pink</a>
-      <button class="page-header__nav-toggle" type="button">Открыть меню</button>
+      <div class="page-header__main-bar wrapper">
+        <a href="#">
+          <img class="logo logo--small page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="22">
+        </a>
+        <button class="page-header__nav-toggle" type="button">Открыть меню</button>
+      </div>
       <nav class="page-header__nav">
         <ul class="main-nav">
           <li class="main-nav__item">
-            <a href="#">Главная</a>
+            <a class="main-nav__link" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="photo.html">Фотографии</a>
+            <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">Конкурс</a>
+            <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a>
+            <a class="main-nav__link" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <section class="intro intro--index">
-        <a href="https://itunes.apple.com/" class="intro__btn-download">Скачать приложение</a>
+      <section class="intro intro--index wrapper">
+        <a class="btn intro__btn-download" href="https://itunes.apple.com/">Скачать приложение</a>
         <ul class="intro__download-list">
           <li class="intro__download-item">
             <a class="intro__store-icon intro__store-icon--apple" href="https://itunes.apple.com/">App Store</a>
@@ -42,9 +48,11 @@
         <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
       <section class="about">
-        <p class="about__title">Устали от серости мегаполиса?</p>
-        <p class="about__title">Нам есть, что вам предложить!</p>
-        <ul class="about__features features">
+        <div class="wrapper">
+          <p class="about__title">Устали от серости мегаполиса?</p>
+          <p class="about__title">Нам есть, что вам предложить!</p>
+        </div>
+        <ul class="about__features features wrapper">
           <li class="features__item">
             <h3 class="features__name">Поднимает настроение</h3>
             <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -57,10 +65,10 @@
             <h3 class="features__name">Заводит новых друзей</h3>
             <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
+          <li class="features__item features__item--phone">
+            <img class="features__phone-img" src="img/iphone-screen-mobile@1x.png" alt="Приложение на телефоне" width="157" height="320">
+          </li>
         </ul>
-        <div class="about__phone">
-          <img class="about__phone-img" src="http://placehold.it/150x100" alt="Приложение на телефоне" width="155" height="277">
-        </div>
       </section>
       <section class="reviews">
         <div class="reviews__wrapper slider">
@@ -126,22 +134,24 @@
         </div>
       </section>
       <section class="contacts">
-        <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
-        <ul class="contacts__contacts-list">
-          <li class="contact contacts__contact">
-            <b class="contact__method">Звоните:</b>
-            <p class="contact__info">+7 (812) 555-66-66</p>
-          </li>
-          <li class="contact contacts__contact">
-            <b class="contact__method">Пишите:</b>
-            <p class="contact__info"><a class="contact__mail-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-          </li>
-          <li class="contact contacts__contact">
-            <b class="contact__method">Приезжайте в гости:</b>
-            <p class="contact__info">ул. Большая Конюшенная, 19/8</p>
-          </li>
-        </ul>
-        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A306cba3031a276a8dae489041e4b55db267f68944eb10754191d0ee8c91f2abf&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
+        <div class="wrapper">
+          <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
+          <ul class="contacts__contacts-list">
+            <li class="contact contacts__contact">
+              <b class="contact__method">Звоните:</b>
+              <p class="contact__info">+7 (812) 555-66-66</p>
+            </li>
+            <li class="contact contacts__contact">
+              <b class="contact__method">Пишите:</b>
+              <p class="contact__info"><a class="contact__mail-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+            </li>
+            <li class="contact contacts__contact">
+              <b class="contact__method">Приезжайте в гости:</b>
+              <p class="contact__info">ул. Большая Конюшенная, 19/8</p>
+            </li>
+          </ul>
+        </div>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A306cba3031a276a8dae489041e4b55db267f68944eb10754191d0ee8c91f2abf&amp;source=constructor" width="100%" height="240" frameborder="0"></iframe>
       </section>
     </main>
   </body>

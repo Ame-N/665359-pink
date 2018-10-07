@@ -1,0 +1,35 @@
+.radio-group {
+  .text-headers(normal);
+  display: block;
+  position: relative;
+  padding: 8px 0 8px 60px;
+  margin-bottom: 40px;
+}
+
+.radio-group__input {
+  width: 0;
+  height: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-color: @color-white;
+    border: 2px solid @color-light-borders;
+    border-radius: 50%;
+  }
+
+  &:checked::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    background-color: @color-pink;
+    border-radius: 50%;
+  }
+}

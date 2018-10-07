@@ -1,0 +1,33 @@
+.social {
+  .reset-list();
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+}
+
+.social__item {
+  width: 45px;
+  height: 45px;
+  margin-right: 12px;
+}
+
+.social__link {
+  width: inherit;
+  height: inherit;
+  display: block;
+  background: @color-white center no-repeat;
+  border: 3px solid @color-social-borders;
+  border-radius: 50%;
+
+  &--twitter {
+    background-image: url("../../img/icon-twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../../img/icon-facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../../img/icon-youtube.svg");
+  }
+}

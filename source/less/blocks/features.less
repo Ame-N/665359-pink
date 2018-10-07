@@ -1,0 +1,33 @@
+.features {
+  .reset-list();
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+  background-color: @color-grey;
+}
+
+.features__item {
+  text-align: center;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--phone {
+    height: 277px;
+    overflow: hidden;
+  }
+}
+
+.features__name {
+  .text-headers();
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.features__text {
+  .text-regular();
+  margin: 0;
+  line-height: 24px;
+}

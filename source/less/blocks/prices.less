@@ -1,0 +1,79 @@
+.prices {
+  background-color: @color-grey;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.prices__table {
+  border-collapse: collapse;
+}
+
+.prices__tariff {
+  box-sizing: border-box;
+  min-width: 280px;
+  padding: 25px 20px;
+  background-color: @color-main;
+  color: @color-white;
+  border: 1px solid @color-light-borders;
+
+  &--popular {
+    position: relative;
+
+    &::before {
+      content: url("../../img/bg-hit.svg");
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "Хит";
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      .text-regular();
+      text-transform: uppercase;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.prices__name {
+  .text-headers();
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.prices__price {
+  .text-large();
+}
+
+.prices__feature {
+  .text-regular();
+  padding: 25px 20px;
+  text-transform: uppercase;
+  border: 1px solid @color-light-borders;
+  background-color: @color-white;
+}
+
+.prices__icon {
+  display: inline-block;
+  font-size: 0;
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--checked {
+    background-image: url("../../img/icon-yes.svg");
+  }
+
+  &--unchecked {
+    background-image: url("../../img/icon-no.svg");
+  }
+}
+
+.prices__toggles {
+  text-align: center;
+  margin: 0;
+}
