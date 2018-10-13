@@ -29,15 +29,15 @@
   }
 
   &--clip {
-    background-image: url("../../img/icon-editor-crop.svg");
+    background-image: url("../img/icon-editor-crop.svg");
   }
 
   &--color {
-    background-image: url("../../img/icon-editor-fill.svg");
+    background-image: url("../img/icon-editor-fill.svg");
   }
 
   &--contrast {
-    background-image: url("../../img/icon-editor-contrast.svg");
+    background-image: url("../img/icon-editor-contrast.svg");
   }
 }
 
@@ -113,17 +113,21 @@
   padding-bottom: 41px;
 }
 
-.editor__submit-btn {
-  margin-bottom: 12px;
-  background-color: @color-grey;
-  border-color: @color-pink;
-  color: @color-pink;
-}
+.editor__btn {
+  width: 280px;
 
-.editor__reset-btn {
-  background-color: @color-grey;
-  border-color: @color-grey-borders;
-  color: @color-grey-borders;
+  &--submit {
+    margin-bottom: 12px;
+    background-color: transparent;
+    border-color: @color-pink;
+    color: @color-pink;
+  }
+
+  &--reset {
+    background-color: transparent;
+    border-color: @color-grey-borders;
+    color: @color-grey-borders;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -157,8 +161,15 @@
   }
 
   .editor__action-bar {
+    width: 275px;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  .editor__btn {
+    width: 250px;
   }
 
   .editor__label-group,
@@ -172,6 +183,26 @@
 
 @media (min-width: @desktop-width) {
   .editor {
+    box-sizing: border-box;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 57px 80px;
+  }
+
+  .editor__action-bar {
+    width: 410px;
+  }
+
+  .editor__btn {
+    width: 180px;
+
+    &--submit {
+      margin-bottom: 0;
+    }
+  }
+
+  .editor__range {
+    min-width: 288px;
   }
 }

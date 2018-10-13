@@ -19,6 +19,10 @@
 
 @media (min-width: @tablet-width) {
   .research {
+    display: block;
+  }
+
+  .research__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,6 +59,12 @@
 @media (min-width: @desktop-width) {
   .research {
     background-color: @color-grey;
+  }
+
+  .research__wrapper {
+    max-width: @desktop-width;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .research__content {

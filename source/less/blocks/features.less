@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 55px;
-  background-color: @color-grey;
 }
 
 .features__item {
@@ -55,6 +54,9 @@
 @media (min-width: @desktop-width) {
   .features {
     flex-direction: row;
+    max-width: @desktop-width;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .features__item {

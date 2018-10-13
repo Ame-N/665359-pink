@@ -2,28 +2,24 @@
   .text-large();
   padding-top: 35px;
   background-color: @color-main-dark;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   color: @color-white;
   min-height: 170px;
+}
 
-  &--index {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 514px;
-    padding-bottom: 30px;
-    background-image:
-      url("../../img/iphone-hand-mobile@1x.png"),
-      url("../../img/bg-back-mobile@1x.jpg");
-    background-position:
-      50% 176px,
-      top;
-    background-size:
-      auto,
-      cover;
-  }
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 210px;
+  padding-top: 514px;
+  padding-bottom: 30px;
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-position: 50% 176px;
+  background-repeat: no-repeat;
 }
 
 .intro__slogan {
@@ -50,15 +46,15 @@
   background: transparent center no-repeat;
 
   &--apple {
-    background-image: url("../../img/logo-apple.svg");
+    background-image: url("../img/logo-apple.svg");
   }
 
   &--android {
-    background-image: url("../../img/logo-android.svg");
+    background-image: url("../img/logo-android.svg");
   }
 
   &--windows {
-    background-image: url("../../img/logo-microsoft.svg");
+    background-image: url("../img/logo-microsoft.svg");
   }
 }
 
@@ -68,6 +64,10 @@
   margin: 0;
 }
 
+.intro__btn-download {
+  width: 280px;
+}
+
 .intro__page-title {
   .text-large();
   margin: 0;
@@ -75,20 +75,35 @@
 }
 
 @media (min-width: @tablet-width) {
-  .intro {
-    &--index {
-      padding-top: 100px;
-      padding-bottom: 110px;
-    }
-  }
-
   .intro__wrapper {
     width: 300px;
+    height: 400px;
+    padding: 100px 320px 110px 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-position: -40px bottom;
   }
 
   .intro__slogan {
     .text-extralarge();
     display: block;
     text-align: center;
+    padding: 0 35px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__wrapper {
+    padding-right: 640px;
+    max-width: @desktop-width;
+    height: 500px;
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: -25px bottom;
+  }
+
+  .intro__btn-download {
+    width: 300px;
   }
 }

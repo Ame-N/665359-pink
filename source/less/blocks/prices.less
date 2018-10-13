@@ -24,7 +24,7 @@
     position: relative;
 
     &::before {
-      content: url("../../img/bg-hit.svg");
+      content: url("../img/bg-hit.svg");
       position: absolute;
       top: 0;
       left: 0;
@@ -77,11 +77,11 @@
   background-position: center;
 
   &--checked {
-    background-image: url("../../img/icon-yes.svg");
+    background-image: url("../img/icon-yes.svg");
   }
 
   &--unchecked {
-    background-image: url("../../img/icon-no.svg");
+    background-image: url("../img/icon-no.svg");
   }
 }
 
@@ -94,6 +94,11 @@
   .prices__wrapper {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .prices__table {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .prices__toggles {
@@ -126,6 +131,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .prices__wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .prices__tariff {
     min-width: 235px;
   }
