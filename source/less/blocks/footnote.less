@@ -6,3 +6,13 @@
 .footnote__asterisk {
   color: @color-pink;
 }
+
+.footnote__expanded {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .footnote__expanded {
+    display: inline;
+  }
+}

@@ -2,7 +2,7 @@
   .text-headers(normal);
   display: block;
   position: relative;
-  padding: 8px 0 8px 60px;
+  padding: 5px 0 5px 60px;
   margin-bottom: 40px;
 }
 
@@ -32,5 +32,11 @@
     border-bottom: 2px solid @color-pink;
     border-left: 2px solid @color-pink;
     transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .checkbox-group:nth-child(2n) {
+    margin-bottom: 0;
   }
 }

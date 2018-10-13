@@ -1,12 +1,11 @@
-.editor__main-controls {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.editor {
   padding-top: 20px;
-  padding-bottom: 28px;
+  background-color: @color-grey;
 }
 
 .editor__img {
+  display: block;
+  margin: 0 auto;
   margin-bottom: 40px;
 }
 
@@ -46,6 +45,10 @@
   appearance: none;
   width: 100%;
   background: transparent;
+
+  &:not(:first-child) {
+    display: none;
+  }
 
   &:focus {
     outline: none;
@@ -108,7 +111,6 @@
   align-items: center;
   padding-top: 38px;
   padding-bottom: 41px;
-  border-top: 1px solid @color-grey-borders;
 }
 
 .editor__submit-btn {
@@ -122,4 +124,54 @@
   background-color: @color-grey;
   border-color: @color-grey-borders;
   color: @color-grey-borders;
+}
+
+@media (min-width: @tablet-width) {
+  .editor {
+    display: flex;
+    padding-top: 57px;
+    padding-bottom: 57px;
+  }
+
+  .editor__range {
+    min-width: 202px;
+    margin-bottom: 71px;
+
+    &:not(:first-child) {
+      display: block;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .editor__icon {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .editor__action-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .editor__label-group,
+  .editor__range-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .editor {
+    padding: 57px 80px;
+  }
 }

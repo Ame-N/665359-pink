@@ -16,3 +16,35 @@
 .contacts__contact {
   margin-bottom: 28px;
 }
+
+@media (min-width: @tablet-width) {
+  .contacts__title {
+    font-size: 40px;
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contacts__contacts-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .contacts__contact {
+    width: 300px;
+
+    &:last-child {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__contact {
+    &--mail {
+      order: 1;
+    }
+  }
+}

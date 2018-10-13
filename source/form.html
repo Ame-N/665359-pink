@@ -37,55 +37,59 @@
           <h1 class="intro__page-title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </section>
-      <section class="contest-form">
-        <p class="contest-form__title wrapper">Поделитесь своей историей и получите шанс выиграть ценный приз &ndash; 1000 миль на вашу бонусную карту!</p>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="wrapper">
+      <section class="contest-form wrapper">
+        <p class="contest-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз &ndash; 1000 миль на вашу бонусную карту!</p>
+        <form class="contest-form__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="contest-form__group contest-form__group--full-name">
             <div class="text-input contest-form__input">
               <label class="label text-input__label" for="surname">Фамилия:</label>
-              <input class="text-input__field" type="text" id="surname" name="surname" placeholder="Укажите фамилию *">
+              <input class="text-input__field" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
             </div>
             <div class="text-input contest-form__input">
               <label class="label text-input__label" for="name">Имя:</label>
-              <input class="text-input__field" type="text" id="name" name="name" placeholder="Введите ваше имя *">
+              <input class="text-input__field" type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
             </div>
             <div class="text-input contest-form__input">
               <label class="label text-input__label" for="patronymic">Отчество:</label>
               <input class="text-input__field" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
             </div>
           </div>
-          <div class="fieldset contest-form__fieldset wrapper">
-            <p class="label fieldset__label">Ваши безбашенные достижения в путешествии</p>
-            <label class="checkbox-group">
-              <input class="checkbox-group__input" type="checkbox" name="achievement1" value="shark" checked> Сделал селфи с акулой
-            </label>
-            <label class="checkbox-group">
-              <input class="checkbox-group__input" type="checkbox" name="achievement2" value="beach" checked> Обгорел на пляже
-            </label>
-            <label class="checkbox-group">
-              <input class="checkbox-group__input" type="checkbox" name="achievement3" value="chuck"> Видел Чака Норриса
-            </label>
-            <label class="checkbox-group">
-              <input class="checkbox-group__input" type="checkbox" name="achievement4" value="souvenir"> Накупил сувениров
-            </label>
-            <label class="checkbox-group">
-              <input class="checkbox-group__input" type="checkbox" name="achievement5" value="tower" checked> Удержал башню
-            </label>
-            <label class="checkbox-group">
-              <input class="checkbox-group__input" type="checkbox" name="achievement6" value="hotel"> Разгромил отель
-            </label>
-          </div>
-          <div class="wrapper">
+          <fieldset class="fieldset contest-form__group contest-form__group--achieve form-achieve">
+            <legend class="label fieldset__label">Ваши безбашенные достижения в путешествии</legend>
+            <div class="form-achieve__inner-wrapper">
+              <label class="checkbox-group">
+                <input class="checkbox-group__input" type="checkbox" name="achievement1" value="shark" checked> Сделал селфи с акулой
+              </label>
+              <label class="checkbox-group">
+                <input class="checkbox-group__input" type="checkbox" name="achievement2" value="beach" checked> Обгорел на пляже
+              </label>
+              <label class="checkbox-group">
+                <input class="checkbox-group__input" type="checkbox" name="achievement3" value="chuck"> Видел Чака Норриса
+              </label>
+              <label class="checkbox-group">
+                <input class="checkbox-group__input" type="checkbox" name="achievement4" value="souvenir"> Накупил сувениров
+              </label>
+              <label class="checkbox-group">
+                <input class="checkbox-group__input" type="checkbox" name="achievement5" value="tower" checked> Удержал башню
+              </label>
+              <label class="checkbox-group">
+                <input class="checkbox-group__input" type="checkbox" name="achievement6" value="hotel"> Разгромил отель
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="fieldset fieldset--no-mobile contest-form__group contest-form__group--contacts wrapper">
+            <legend class="label fieldset__label fieldset__label--no-mobile">Контактная информация</legend>
             <div class="text-input contest-form__input">
               <label class="label text-input__label" for="phone">Номер телефона</label>
               <input class="text-input__field" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
             </div>
             <div class="text-input contest-form__input">
               <label class="label text-input__label" for="email">Адрес почты</label>
-              <input class="text-input__field" type="email" id="email"  name="email" placeholder="Введите почту *">
+              <input class="text-input__field" type="email" id="email"  name="email" placeholder="Введите почту *" required>
             </div>
-          </div><div class="fieldset contest-form__fieldset wrapper">
-            <p class="label fieldset__label">С каким приложением путешествовали?</p>
+          </fieldset>
+          <fieldset class="fieldset contest-form__group contest-form__group--app">
+            <legend class="label fieldset__label">С каким приложением путешествовали?</legend>
             <label class="radio-group">
               <input class="radio-group__input" type="radio" name="app" value="ios" checked> Pink для iOS
             </label>
@@ -95,14 +99,14 @@
             <label class="radio-group">
               <input class="radio-group__input" type="radio" name="app" value="windows"> Windows Phone
             </label>
-          </div>
-          <div class="wrapper">
-            <div class="textarea contest-form__textarea">
-              <label class="label textarea__label" for="textarea">Опишите свои эмоции</label>
-              <textarea class="textarea__input" id="textarea" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            </div>
+          </fieldset>
+          <fieldset class="fieldset textarea contest-form__group contest-form__group--emotions">
+            <legend class="label fieldset__label" for="textarea">Опишите свои эмоции</legend>
+            <textarea class="textarea__input" id="textarea" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </fieldset>
+          <div class="contest-form__group contest-form__group--action-bar">
             <input class="contest-form__submit-btn form-btn" type="submit" value="Отправить форму">
-            <p class="footnote contest-form__footnote"><span class="footnote__asterisk">*</span> &ndash; обязательные поля</p>
+            <p class="footnote contest-form__footnote"><span class="footnote__asterisk">*</span> &ndash; обязательные <span class="footnote__expanded">для заполнения</span> поля</p>
           </div>
         </form>
         <div class="popup popup--success" hidden>

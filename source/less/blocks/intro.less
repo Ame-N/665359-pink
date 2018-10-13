@@ -3,6 +3,7 @@
   padding-top: 35px;
   background-color: @color-main-dark;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   color: @color-white;
   min-height: 170px;
@@ -19,7 +20,14 @@
     background-position:
       50% 176px,
       top;
+    background-size:
+      auto,
+      cover;
   }
+}
+
+.intro__slogan {
+  display: none;
 }
 
 .intro__download-list {
@@ -39,7 +47,7 @@
   display: block;
   width: inherit;
   height: inherit;
-  background: @color-main-dark center no-repeat;
+  background: transparent center no-repeat;
 
   &--apple {
     background-image: url("../../img/logo-apple.svg");
@@ -64,4 +72,23 @@
   .text-large();
   margin: 0;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    &--index {
+      padding-top: 100px;
+      padding-bottom: 110px;
+    }
+  }
+
+  .intro__wrapper {
+    width: 300px;
+  }
+
+  .intro__slogan {
+    .text-extralarge();
+    display: block;
+    text-align: center;
+  }
 }

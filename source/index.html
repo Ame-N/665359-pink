@@ -15,7 +15,7 @@
         <button class="page-header__nav-toggle" type="button">Открыть меню</button>
       </div>
       <nav class="page-header__nav">
-        <ul class="main-nav">
+        <ul class="main-nav wrapper">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">Главная</a>
           </li>
@@ -33,19 +33,22 @@
     </header>
     <main class="page-main">
       <section class="intro intro--index wrapper">
-        <a class="btn intro__btn-download" href="https://itunes.apple.com/">Скачать приложение</a>
-        <ul class="intro__download-list">
-          <li class="intro__download-item">
-            <a class="intro__store-icon intro__store-icon--apple" href="https://itunes.apple.com/">App Store</a>
-          </li>
-          <li class="intro__download-item">
-            <a class="intro__store-icon intro__store-icon--android" href="https://play.google.com/">Google Play</a>
-          </li>
-          <li class="intro__download-item">
-            <a class="intro__store-icon intro__store-icon--windows" href="https://www.microsoft.com/ru-ru/store/apps/">Windows Store</a>
-          </li>
-        </ul>
-        <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="intro__wrapper">
+          <h1 class="intro__slogan">Взгляните на жизнь иначе!</h1>
+          <a class="btn intro__btn-download" href="https://itunes.apple.com/">Скачать приложение</a>
+          <ul class="intro__download-list">
+            <li class="intro__download-item">
+              <a class="intro__store-icon intro__store-icon--apple" href="https://itunes.apple.com/">App Store</a>
+            </li>
+            <li class="intro__download-item">
+              <a class="intro__store-icon intro__store-icon--android" href="https://play.google.com/">Google Play</a>
+            </li>
+            <li class="intro__download-item">
+              <a class="intro__store-icon intro__store-icon--windows" href="https://www.microsoft.com/ru-ru/store/apps/">Windows Store</a>
+            </li>
+          </ul>
+          <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </section>
       <section class="about">
         <div class="wrapper">
@@ -65,25 +68,36 @@
             <h3 class="features__name">Заводит новых друзей</h3>
             <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
+          <li class="features__item features__item--phone features__item--desktop">
+            <img class="features__phone-img" src="img/iphone-screen-1-desktop@1x.png" alt="Приложение на телефоне" width="157" height="320">
+          </li>
+          <li class="features__item features__item--phone features__item--desktop">
+            <img class="features__phone-img" src="img/iphone-screen-2-desktop@1x.png" alt="Приложение на телефоне" width="157" height="320">
+          </li>
           <li class="features__item features__item--phone">
             <img class="features__phone-img" src="img/iphone-screen-mobile@1x.png" alt="Приложение на телефоне" width="157" height="320">
           </li>
         </ul>
       </section>
-      <section class="reviews">
+      <section class="research wrapper">
+        <div class="research__timer">
+          <img class="research__img" src="img/icon-timer.svg" alt="Таймер" width="300" height="300">
+        </div>
+        <div class="research__content">
+          <h2 class="research__title">Эффект на 24 часа!</h2>
+          <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a class="research__link" href="#">Узнать больше об исследовании</a>
+        </div>
+      </section>
+      <section class="reviews wrapper">
         <div class="reviews__wrapper slider">
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author">Николай Петров</cite>
+              <cite class="reviews__author">
+                Николай Петров
+                <small class="reviews__bio">25 лет, водитель трамвая</small>
+              </cite>
               <p class="reviews__text">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
-            </blockquote>
-            <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author"></cite>
-              <p class="reviews__text"></p>
-            </blockquote>
-            <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author"></cite>
-              <p class="reviews__text"></p>
             </blockquote>
           </div>
           <p class="reviews__toggles slider__toggles">
@@ -91,12 +105,15 @@
             <button class="slider__toggle" type="button">2</button>
             <button class="slider__toggle" type="button">3</button>
           </p>
+          <button class="reviews__btn reviews__btn--prev" type="button">Предыдущий</button>
+          <button class="reviews__btn reviews__btn--next" type="button">Следующий</button>
         </div>
       </section>
       <section class="prices">
         <div class="prices__wrapper slider">
           <table class="prices__table slider__list">
             <tr>
+              <th class="prices__tariff prices__tariff--invisible"></th>
               <th class="prices__tariff">
                 <h3 class="prices__name">База</h3>
                 <span class="prices__price">1,99 USD</span>
@@ -111,19 +128,22 @@
               </th>
             </tr>
             <tr>
-              <td class="prices__feature">Розовый фильтр<span class="prices__icon prices__icon--checked"></span></td>
-              <td class="prices__feature">Розовый фильтр<span class="prices__icon prices__icon--checked"></span></td>
-              <td class="prices__feature">Розовый фильтр<span class="prices__icon prices__icon--checked"></span></td>
+              <td class="prices__feature prices__feature--header">Розовый фильтр</td>
+              <td class="prices__feature"><span class="prices__text">Розовый фильтр</span><span class="prices__icon prices__icon--checked"></span></td>
+              <td class="prices__feature"><span class="prices__text">Розовый фильтр</span><span class="prices__icon prices__icon--checked"></span></td>
+              <td class="prices__feature"><span class="prices__text">Розовый фильтр</span><span class="prices__icon prices__icon--checked"></span></td>
             </tr>
             <tr>
-              <td class="prices__feature">Смайлики<span class="prices__icon prices__icon--unchecked"></span></td>
-              <td class="prices__feature">Смайлики<span class="prices__icon prices__icon--checked"></span></td>
-              <td class="prices__feature">Смайлики<span class="prices__icon prices__icon--checked"></span></td>
+              <td class="prices__feature prices__feature--header">Смайлики</td>
+              <td class="prices__feature"><span class="prices__text">Смайлики</span><span class="prices__icon prices__icon--unchecked"></span></td>
+              <td class="prices__feature"><span class="prices__text">Смайлики</span><span class="prices__icon prices__icon--checked"></span></td>
+              <td class="prices__feature"><span class="prices__text">Смайлики</span><span class="prices__icon prices__icon--checked"></span></td>
             </tr>
             <tr>
-              <td class="prices__feature">Комментарии<span class="prices__icon prices__icon--unchecked"></span></td>
-              <td class="prices__feature">Комментарии<span class="prices__icon prices__icon--unchecked"></span></td>
-              <td class="prices__feature">Комментарии<span class="prices__icon prices__icon--checked"></span></td>
+              <td class="prices__feature prices__feature--header">Комментарии</td>
+              <td class="prices__feature"><span class="prices__text">Комментарии</span><span class="prices__icon prices__icon--unchecked"></span></td>
+              <td class="prices__feature"><span class="prices__text">Комментарии</span><span class="prices__icon prices__icon--unchecked"></span></td>
+              <td class="prices__feature"><span class="prices__text">Комментарии</span><span class="prices__icon prices__icon--checked"></span></td>
             </tr>
           </table>
           <p class="prices__toggles slider__toggles">
@@ -141,7 +161,7 @@
               <b class="contact__method">Звоните:</b>
               <p class="contact__info">+7 (812) 555-66-66</p>
             </li>
-            <li class="contact contacts__contact">
+            <li class="contact contacts__contact contacts__contact--mail">
               <b class="contact__method">Пишите:</b>
               <p class="contact__info"><a class="contact__mail-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
             </li>
@@ -154,5 +174,20 @@
         <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A306cba3031a276a8dae489041e4b55db267f68944eb10754191d0ee8c91f2abf&amp;source=constructor" width="100%" height="240" frameborder="0"></iframe>
       </section>
     </main>
+    <footer class="page-footer page-footer--index">
+      <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк">
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/">Twitter</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://facebook.com/">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/">YouTube</a>
+        </li>
+      </ul>
+      <p class="page-footer__copyright">Разработано <a class="page-footer__developer-logo" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a></p>
+    </footer>
   </body>
 </html>

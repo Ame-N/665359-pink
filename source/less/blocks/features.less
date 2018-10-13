@@ -14,6 +14,10 @@
     margin-bottom: 0;
   }
 
+  &--desktop {
+    display: none;
+  }
+
   &--phone {
     height: 277px;
     overflow: hidden;
@@ -30,4 +34,38 @@
   .text-regular();
   margin: 0;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    flex-wrap: wrap-reverse;
+    height: 500px;
+  }
+
+  .features__item {
+    width: 310px;
+    text-align: left;
+
+    &--phone {
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    flex-direction: row;
+  }
+
+  .features__item {
+    text-align: center;
+
+    &--desktop {
+      display: block;
+    }
+
+    &--phone {
+      height: auto;
+    }
+  }
 }
