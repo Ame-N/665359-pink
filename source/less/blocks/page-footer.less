@@ -2,6 +2,10 @@
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
+
+  &--index {
+    display: none;
+  }
 }
 
 .page-footer__logo {
@@ -21,6 +25,13 @@
   width: 27px;
   height: 34px;
   font-size: 0;
-  background-image: url("../../img/logo-htmlacademy.svg");
+  background-image: url("../img/logo-htmlacademy.svg");
   vertical-align: middle;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }

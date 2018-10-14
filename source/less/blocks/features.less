@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 55px;
-  background-color: @color-grey;
 }
 
 .features__item {
@@ -12,6 +11,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--desktop {
+    display: none;
   }
 
   &--phone {
@@ -30,4 +33,41 @@
   .text-regular();
   margin: 0;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    flex-wrap: wrap-reverse;
+    height: 500px;
+  }
+
+  .features__item {
+    width: 310px;
+    text-align: left;
+
+    &--phone {
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    flex-direction: row;
+    max-width: @desktop-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .features__item {
+    text-align: center;
+
+    &--desktop {
+      display: block;
+    }
+
+    &--phone {
+      height: auto;
+    }
+  }
 }

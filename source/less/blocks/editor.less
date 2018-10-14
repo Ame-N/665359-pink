@@ -1,12 +1,11 @@
-.editor__main-controls {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.editor {
   padding-top: 20px;
-  padding-bottom: 28px;
+  background-color: @color-grey;
 }
 
 .editor__img {
+  display: block;
+  margin: 0 auto;
   margin-bottom: 40px;
 }
 
@@ -30,15 +29,15 @@
   }
 
   &--clip {
-    background-image: url("../../img/icon-editor-crop.svg");
+    background-image: url("../img/icon-editor-crop.svg");
   }
 
   &--color {
-    background-image: url("../../img/icon-editor-fill.svg");
+    background-image: url("../img/icon-editor-fill.svg");
   }
 
   &--contrast {
-    background-image: url("../../img/icon-editor-contrast.svg");
+    background-image: url("../img/icon-editor-contrast.svg");
   }
 }
 
@@ -46,6 +45,10 @@
   appearance: none;
   width: 100%;
   background: transparent;
+
+  &:not(:first-child) {
+    display: none;
+  }
 
   &:focus {
     outline: none;
@@ -108,18 +111,98 @@
   align-items: center;
   padding-top: 38px;
   padding-bottom: 41px;
-  border-top: 1px solid @color-grey-borders;
 }
 
-.editor__submit-btn {
-  margin-bottom: 12px;
-  background-color: @color-grey;
-  border-color: @color-pink;
-  color: @color-pink;
+.editor__btn {
+  width: 280px;
+
+  &--submit {
+    margin-bottom: 12px;
+    background-color: transparent;
+    border-color: @color-pink;
+    color: @color-pink;
+  }
+
+  &--reset {
+    background-color: transparent;
+    border-color: @color-grey-borders;
+    color: @color-grey-borders;
+  }
 }
 
-.editor__reset-btn {
-  background-color: @color-grey;
-  border-color: @color-grey-borders;
-  color: @color-grey-borders;
+@media (min-width: @tablet-width) {
+  .editor {
+    display: flex;
+    padding-top: 57px;
+    padding-bottom: 57px;
+  }
+
+  .editor__range {
+    min-width: 202px;
+    margin-bottom: 71px;
+
+    &:not(:first-child) {
+      display: block;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .editor__icon {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .editor__action-bar {
+    width: 275px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  .editor__btn {
+    width: 250px;
+  }
+
+  .editor__label-group,
+  .editor__range-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .editor {
+    box-sizing: border-box;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 57px 80px;
+  }
+
+  .editor__action-bar {
+    width: 410px;
+  }
+
+  .editor__btn {
+    width: 180px;
+
+    &--submit {
+      margin-bottom: 0;
+    }
+  }
+
+  .editor__range {
+    min-width: 288px;
+  }
 }

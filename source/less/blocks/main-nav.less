@@ -16,3 +16,22 @@
   .text-headers;
   text-transform: uppercase;
 }
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    display: flex;
+  }
+
+  .main-nav__item {
+    margin-right: 80px;
+    border: none;
+
+    &:last-child {
+      margin-right: 20px;
+    }
+  }
+
+  .main-nav__link {
+    text-transform: none;
+  }
+}
