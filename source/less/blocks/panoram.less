@@ -1,0 +1,43 @@
+.panoram {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.panoram__img {
+  width: 100%;
+  height: auto;
+}
+
+.panoram__label {
+  position: relative;
+
+  &::after {
+    .text-small(bold);
+    content: "Панорама дня";
+    position: absolute;
+    box-sizing: border-box;
+    width: 140px;
+    padding: 14px 5px;
+    right: 0;
+    top: 0;
+    text-align: center;
+    background-color: @color-pink;
+    text-transform: uppercase;
+    color: @color-white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .panoram__label {
+    &::after {
+      top: -452px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .panoram__img {
+    max-width: 1200px;
+  }
+}

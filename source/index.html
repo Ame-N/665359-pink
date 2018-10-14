@@ -10,7 +10,11 @@
     <header class="page-header">
       <div class="page-header__main-bar wrapper">
         <a href="#">
-          <img class="logo logo--small page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="22">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg 1x">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg 1x">
+            <img class="logo logo--small page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="22">
+          </picture>
         </a>
         <button class="page-header__nav-toggle" type="button">Открыть меню</button>
       </div>
@@ -70,13 +74,17 @@
               <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
             <li class="features__item features__item--phone features__item--desktop">
-              <img class="features__phone-img" src="img/iphone-screen-1-desktop@1x.png" alt="Приложение на телефоне" width="157" height="320">
+              <img class="features__phone-img" src="img/iphone-screen-1-desktop@1x.png" alt="Приложение на телефоне">
             </li>
             <li class="features__item features__item--phone features__item--desktop">
-              <img class="features__phone-img" src="img/iphone-screen-2-desktop@1x.png" alt="Приложение на телефоне" width="157" height="320">
+              <img class="features__phone-img" src="img/iphone-screen-2-desktop@1x.png" alt="Приложение на телефоне">
             </li>
             <li class="features__item features__item--phone">
-              <img class="features__phone-img" src="img/iphone-screen-mobile@1x.png" alt="Приложение на телефоне" width="157" height="320">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x">
+                <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x">
+                <img class="features__phone-img" src="img/iphone-screen-mobile@1x.png" alt="Приложение на телефоне">
+              </picture>
             </li>
           </ul>
         </div>
@@ -179,7 +187,10 @@
       </section>
     </main>
     <footer class="page-footer page-footer--index">
-      <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк">
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg 1x">
+        <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк">
+      </picture>
       <ul class="page-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--twitter" href="https://twitter.com/">Twitter</a>
