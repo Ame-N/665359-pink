@@ -85,8 +85,16 @@
     cursor: pointer;
     transform: rotate(45deg);
     outline: none;
-    border: 2px solid @color-slider-inactive;
+    border: 2px solid fade(@color-main, 30%);
     padding: 0;
+
+    &:hover {
+      border-color: fade(@color-main, 60%);
+    }
+
+    &:active {
+      border-color: fade(@color-main, 10%);
+    }
 
     &--prev {
       order: -1;

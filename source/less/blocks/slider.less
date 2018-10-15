@@ -9,7 +9,7 @@
   margin: 0;
   margin-right: 16px;
   font-size: 0;
-  border: 3px solid @color-slider-inactive;
+  border: 3px solid fade(@color-main, 30%);
   border-radius: 50%;
   cursor: pointer;
   outline: none;
@@ -18,9 +18,22 @@
     margin-right: 0;
   }
 
+  &:hover {
+    border-color: fade(@color-main, 60%);
+  }
+
+  &:active {
+    border-color: fade(@color-main, 10%);
+  }
+
   &--active {
     padding: 3px 3px;
     background-color: @color-white;
-    border-color: @color-slider-active;
+    border-color: @color-main;
+
+    &:hover,
+    &:active {
+      border-color: @color-main;
+    }
   }
 }

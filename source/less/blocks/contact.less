@@ -14,3 +14,15 @@
   color: @color-pink;
   text-decoration: none;
 }
+
+.contact__mail-link {
+  &:hover {
+    color: @color-main;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: fade(@color-main, 30%);
+    text-decoration: none;
+  }
+}

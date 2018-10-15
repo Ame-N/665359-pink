@@ -66,6 +66,16 @@
 
 .intro__btn-download {
   width: 280px;
+
+  &:hover {
+    background-color: @color-white;
+    color: @color-pink;
+    border-color: @color-white;
+  }
+
+  &:active {
+    color: fade(@color-pink, 30%);
+  }
 }
 
 .intro__page-title {

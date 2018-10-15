@@ -7,9 +7,10 @@
 }
 
 .radio-group__input {
-  width: 0;
-  height: 0;
+  display: none;
+}
 
+.radio-group__label {
   &::before {
     content: "";
     position: absolute;
@@ -22,7 +23,16 @@
     border-radius: 50%;
   }
 
-  &:checked::after {
+  &:hover::before {
+    border-color: @color-main;
+  }
+
+  &:active::before {
+    border-color: @color-pink;
+  }
+
+  &:active::after,
+  .radio-group__input:checked + &::after {
     content: "";
     position: absolute;
     top: 12px;
@@ -31,5 +41,9 @@
     height: 15px;
     background-color: @color-pink;
     border-radius: 50%;
+  }
+
+  .radio-group__input:checked + &:active::after {
+    display: none;
   }
 }

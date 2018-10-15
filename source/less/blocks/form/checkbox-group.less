@@ -7,9 +7,10 @@
 }
 
 .checkbox-group__input {
-  width: 0;
-  height: 0;
+  display: none;
+}
 
+.checkbox-group__label {
   &::before {
     content: "";
     position: absolute;
@@ -21,7 +22,16 @@
     border: 2px solid @color-light-borders;
   }
 
-  &:checked::after {
+  &:hover::before {
+    border-color: @color-main;
+  }
+
+  &:active::before {
+    border-color: @color-pink;
+  }
+
+  &:active::after,
+  .checkbox-group__input:checked + &::after {
     content: "";
     position: absolute;
     top: 12px;
@@ -32,6 +42,10 @@
     border-bottom: 2px solid @color-pink;
     border-left: 2px solid @color-pink;
     transform: rotate(-45deg);
+  }
+
+  .checkbox-group__input:checked + &:active::after {
+    display: none;
   }
 }
 

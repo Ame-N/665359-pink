@@ -16,8 +16,16 @@
   height: inherit;
   display: block;
   background: @color-white center no-repeat;
-  border: 3px solid @color-social-borders;
+  border: 3px solid fade(@color-main, 10%);
   border-radius: 50%;
+
+  &:hover {
+    border-color: @color-main;
+  }
+
+  &:active {
+    border-color: fade(@color-main, 10%);
+  }
 
   &--twitter {
     background-image: url("../img/icon-twitter.svg");

@@ -63,6 +63,10 @@
     border: 2px solid @color-pink;
     border-radius: 50%;
     cursor: pointer;
+
+    &:active {
+      background-color: @color-pink;
+    }
   }
 
   &::-moz-range-thumb {
@@ -72,6 +76,10 @@
     border: 2px solid @color-pink;
     border-radius: 50%;
     cursor: pointer;
+
+    &:active {
+      background-color: @color-pink;
+    }
   }
 
   &::-ms-thumb {
@@ -81,6 +89,10 @@
     border: 2px solid @color-pink;
     border-radius: 50%;
     cursor: pointer;
+
+    &:active {
+      background-color: @color-pink;
+    }
   }
 
   &::-webkit-slider-runnable-track {
@@ -121,12 +133,32 @@
     background-color: transparent;
     border-color: @color-pink;
     color: @color-pink;
+
+    &:hover {
+      background-color: @color-pink;
+      color: @color-white;
+    }
+
+    &:active {
+      color: fade(@color-white, 30%);
+    }
   }
 
   &--reset {
     background-color: transparent;
-    border-color: @color-grey-borders;
-    color: @color-grey-borders;
+    border-color: fade(@color-main, 10%);
+    color: fade(@color-main, 10%);
+
+    &:hover {
+      border-color: fade(@color-main, 30%);
+      color: fade(@color-main, 30%);
+    }
+
+    &:active {
+      border-color: transparent;
+      background-color: fade(@color-main, 30%);
+      color: fade(@color-white, 30%);
+    }
   }
 }
 
