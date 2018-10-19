@@ -1,5 +1,6 @@
 .editor {
   padding-top: 20px;
+  padding-bottom: 40px;
   background-color: @color-grey;
 }
 
@@ -10,22 +11,33 @@
 }
 
 .editor__label-group {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   display: flex;
   justify-content: center;
 }
 
 .editor__icon {
   display: block;
-  width: 50px;
-  height: 50px;
-  margin-right: 34px;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-right: 32px;
   background-repeat: no-repeat;
   background-position: center;
   font-size: 0;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:first-child::after {
+    content: "";
+    position: absolute;
+    left: -55px;
+    bottom: -75px;
+    height: 0;
+    width: 320px;
+    border-bottom: 1px solid @color-light-borders;
   }
 
   &--clip {
@@ -43,8 +55,9 @@
 
 .editor__range {
   appearance: none;
-  width: 100%;
+  width: 240px;
   background: transparent;
+  margin-bottom: 73px;
 
   &:not(:first-child) {
     display: none;
@@ -121,8 +134,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 38px;
-  padding-bottom: 41px;
 }
 
 .editor__btn {

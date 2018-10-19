@@ -1,11 +1,13 @@
 .prices {
-  background-color: @color-grey;
-  padding-top: 45px;
+  background: @color-grey url(../img/bg-triangle-white.svg) no-repeat 100% 0;
+  padding-top: 85px;
   padding-bottom: 45px;
 }
 
 .prices__table {
   border-collapse: collapse;
+  margin-bottom: 30px;
+  margin-left: 20px;
 }
 
 .prices__tariff {
@@ -45,6 +47,7 @@
 .prices__name {
   .text-headers();
   margin: 0;
+  margin-bottom: 5px;
   text-transform: uppercase;
 }
 
@@ -55,7 +58,7 @@
 .prices__feature {
   .text-regular();
   position: relative;
-  padding: 25px 20px;
+  padding: 22px 20px;
   text-transform: uppercase;
   border: 1px solid @color-light-borders;
   background-color: @color-white;
@@ -68,8 +71,9 @@
 .prices__icon {
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
   font-size: 0;
   width: 26px;
   height: 26px;

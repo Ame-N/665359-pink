@@ -1,10 +1,20 @@
+.about {
+  padding-top: 45px;
+}
+
 .about__title {
   .text-large();
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 35px;
+  }
 }
 
 .about__features {
-  background-color: @color-grey;
+  background: @color-grey url(../img/bg-triangle-white.svg) no-repeat 100% 0;
 }
 
 @media (min-width: @tablet-width) {

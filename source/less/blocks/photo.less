@@ -5,10 +5,15 @@
 
 .photo__link {
   line-height: 0;
+  font-size: 0;
+}
+
+.photo__img {
+  display: block;
 }
 
 .photo__wrapper {
-  padding: 20px 18px;
+  padding: 18px 18px 26px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -33,7 +38,7 @@
 .photo__text {
   .text-regular();
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   line-height: 24px;
   width: 100%;
 }
@@ -42,6 +47,7 @@
   .text-small();
   margin: 0;
   color: @color-pink;
+  text-transform: uppercase;
 }
 
 .photo__like-btn {

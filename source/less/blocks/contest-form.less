@@ -1,18 +1,38 @@
 .contest-form__title {
   .text-regular();
-  padding-top: 55px;
-  padding-bottom: 50px;
+  padding-top: 45px;
+  padding-bottom: 40px;
   text-align: center;
   line-height: 30px;
+}
+
+.contest-form__group {
+  margin-bottom: 40px;
+
+  &--app,
+  &--achieve {
+    margin-top: -60px;
+  }
+
+  &--action-bar {
+    margin-bottom: 20px;
+  }
+}
+
+.contest-form__contact {
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .contest-form__footnote {
   display: block;
   text-align: center;
+  margin: 0;
 }
 
 .contest-form__submit-btn {
-  margin: 45px 0;
+  margin-bottom: 45px;
   width: 100%;
 }
 
@@ -29,6 +49,7 @@
   .contest-form__form {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .contest-form__submit-btn {

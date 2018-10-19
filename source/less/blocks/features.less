@@ -2,12 +2,12 @@
   .reset-list();
   display: flex;
   flex-direction: column;
-  padding-top: 55px;
+  padding: 85px 20px 0 20px;
 }
 
 .features__item {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 
   &:last-child {
     margin-bottom: 0;
@@ -18,7 +18,7 @@
   }
 
   &--phone {
-    height: 277px;
+    height: 282px;
     overflow: hidden;
   }
 }
@@ -26,13 +26,20 @@
 .features__name {
   .text-headers();
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .features__text {
   .text-regular();
   margin: 0;
   line-height: 24px;
+}
+
+.features__phone-img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 5px;
 }
 
 @media (min-width: @tablet-width) {

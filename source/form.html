@@ -41,10 +41,10 @@
           <h1 class="intro__page-title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </section>
-      <section class="contest-form wrapper">
-        <p class="contest-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз &ndash; 1000 миль на вашу бонусную карту!</p>
+      <section class="contest-form">
+        <p class="contest-form__title wrapper">Поделитесь своей историей и получите шанс выиграть ценный приз &ndash; 1000 миль на вашу бонусную карту!</p>
         <form class="contest-form__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="contest-form__group contest-form__group--full-name">
+          <div class="wrapper contest-form__group contest-form__group--full-name">
             <div class="text-input contest-form__input">
               <label class="label text-input__label" for="surname">Фамилия:</label>
               <input class="text-input__field" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
@@ -58,8 +58,8 @@
               <input class="text-input__field" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
             </div>
           </div>
-          <fieldset class="fieldset contest-form__group contest-form__group--achieve form-achieve">
-            <legend class="label fieldset__label">Ваши безбашенные достижения в путешествии</legend>
+          <fieldset class="wrapper fieldset contest-form__group contest-form__group--achieve form-achieve">
+            <legend class="label fieldset__label fieldset__label--grey">Ваши безбашенные достижения в путешествии</legend>
             <div class="form-achieve__inner-wrapper">
               <div class="checkbox-group">
                 <input class="checkbox-group__input" type="checkbox" id="achievement1" name="achievement1" value="shark" checked>
@@ -87,7 +87,7 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="fieldset fieldset--no-mobile contest-form__group contest-form__group--contacts wrapper">
+          <fieldset class="wrapper fieldset fieldset--no-mobile contest-form__group contest-form__group--contacts wrapper">
             <legend class="label fieldset__label fieldset__label--no-mobile">Контактная информация</legend>
             <div class="contest-form__inner-wrapper">
               <div class="text-input contest-form__contact">
@@ -100,8 +100,8 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="fieldset contest-form__group contest-form__group--app">
-            <legend class="label fieldset__label">С каким приложением путешествовали?</legend>
+          <fieldset class="wrapper fieldset contest-form__group contest-form__group--app">
+            <legend class="label fieldset__label fieldset__label--grey">С каким приложением путешествовали?</legend>
             <div class="radio-group">
               <input class="radio-group__input" type="radio" id="ios" name="app" value="ios" checked>
               <label class="radio-group__label" for="ios">Pink для iOS</label>
@@ -115,13 +115,13 @@
               <label class="radio-group__label" for="windows">Windows Phone</label>
             </div>
           </fieldset>
-          <fieldset class="fieldset textarea contest-form__group contest-form__group--emotions">
-            <legend class="label fieldset__label" for="textarea">Опишите свои эмоции</legend>
+          <fieldset class="wrapper fieldset textarea contest-form__group contest-form__group--emotions">
+            <legend class="label fieldset__label textarea__label" for="textarea">Опишите свои эмоции</legend>
             <textarea class="textarea__input" id="textarea" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
-          <div class="contest-form__group contest-form__group--action-bar">
+          <div class="wrapper contest-form__group contest-form__group--action-bar">
             <input class="contest-form__submit-btn form-btn" type="submit" value="Отправить форму">
-            <p class="footnote contest-form__footnote"><span class="footnote__asterisk">*</span> &ndash; обязательные <span class="footnote__expanded">для заполнения</span> поля</p>
+            <p class="footnote contest-form__footnote"><span class="footnote__asterisk">*</span> &mdash; обязательные <span class="footnote__expanded">для заполнения</span> поля</p>
           </div>
         </form>
         <div class="popup popup--success" hidden>
