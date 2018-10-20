@@ -45,16 +45,31 @@
 @media (min-width: @tablet-width) {
   .features {
     flex-wrap: wrap-reverse;
-    height: 500px;
+    height: 485px;
+    padding-top: 0;
+    justify-content: flex-end;
   }
 
   .features__item {
     width: 310px;
     text-align: left;
+    margin-bottom: 38px;
+
+    &:nth-child(3) {
+      margin-bottom: 45px;
+    }
 
     &--phone {
+      padding-top: 0;
       height: 100%;
     }
+  }
+
+  .features__phone-img {
+    margin: 0;
+    padding-top: 4px;
+    height: 481px;
+    width: 268px;
   }
 }
 

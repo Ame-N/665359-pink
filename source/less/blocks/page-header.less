@@ -2,6 +2,11 @@
   background-color: @color-main;
 }
 
+.page-header__logo {
+  width: 75px;
+  height: 22px;
+}
+
 .page-header__main-bar {
   display: flex;
   justify-content: space-between;
@@ -22,6 +27,17 @@
   font-size: 0;
   background-color: @color-main;
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__main-bar {
+    padding-bottom: 40px;
+  }
+
+  .page-header__logo {
+    width: 148px;
+    height: 45px;
+  }
 }
 
 @media (min-width: @desktop-width) {

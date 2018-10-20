@@ -4,22 +4,39 @@
   padding-bottom: 40px;
   text-align: center;
   line-height: 30px;
+
+  &--extended {
+    display: none;
+  }
 }
 
 .contest-form__group {
+  box-sizing: border-box;
   margin-bottom: 40px;
 
-  &--app,
-  &--achieve {
-    margin-top: -60px;
+  &--action-bar,
+  &--contacts,
+  &--full-name {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   &--action-bar {
     margin-bottom: 20px;
   }
+
+  &--emotions {
+    margin-bottom: 45px;
+  }
+}
+
+.contest-form__input {
+  margin-bottom: 22px;
 }
 
 .contest-form__contact {
+  margin-bottom: 22px;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -40,16 +57,40 @@
   .contest-form__group {
     &--app,
     &--achieve {
+      margin-top: -60px;
       background-color: @color-grey;
     }
   }
 }
 
 @media (min-width: @tablet-width) {
+  .contest-form__title {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 92px 50px 72px;
+
+    &--extended {
+      display: inline;
+    }
+  }
+
   .contest-form__form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
+  }
+
+  .contest-form__input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 52px;
+    height: 63px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .contest-form__submit-btn {
@@ -58,30 +99,37 @@
 
   .contest-form__group {
     width: 100%;
+    margin-bottom: 57px;
 
     &--full-name {
       width: 100%;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &--app {
       order: 1;
-      width: 100%;
+      padding: 27px 57px 55px;
     }
 
     &--contacts {
       order: 2;
+      padding: 18px 58px 33px;
     }
 
     &--achieve {
       order: 3;
+      padding: 25px 57px 50px;
     }
 
     &--emotions {
       order: 4;
+      margin-bottom: 68px;
     }
 
     &--action-bar {
       order: 5;
+      padding: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -98,12 +146,11 @@
   }
 
   .contest-form__contact {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 36px;
+  }
 
-    & .label {
-      order: 1;
-    }
+  .contest-form__submit-btn {
+    margin-bottom: 0;
   }
 }
 

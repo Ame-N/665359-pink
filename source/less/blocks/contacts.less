@@ -43,6 +43,7 @@
     width: 380px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 47px;
   }
 
   .contacts__contacts-list {
@@ -53,10 +54,23 @@
 
   .contacts__contact {
     width: 300px;
+    margin-bottom: 50px;
 
     &:last-child {
+      width: 250px;
       margin-right: auto;
       margin-left: auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  .contacts__map {
+    height: 375px;
+
+    &::before {
+      top: 0;
+      height: 125px;
+      background-size: contain;
     }
   }
 }

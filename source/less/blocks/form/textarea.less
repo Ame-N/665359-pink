@@ -1,7 +1,6 @@
 .textarea {
   text-align: center;
   padding: 0 20px;
-  margin-bottom: 45px;
 }
 
 .textarea__label {
@@ -15,6 +14,7 @@
   padding: 15px 19px;
   border: 2px solid @color-light-borders;
 
+  &:active,
   &:focus {
     outline: none;
     border-color: @color-pink;
@@ -43,5 +43,15 @@
     color: @color-main;
     line-height: 30px;
     font-family: @font-family;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .textarea {
+    padding: 22px 58px 45px;
+  }
+
+  .textarea__input {
+    height: 195px;
   }
 }

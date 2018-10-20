@@ -71,6 +71,7 @@
 
 .intro__btn-download {
   width: 280px;
+  padding: 14px;
 
   &:hover {
     background-color: @color-white;
@@ -92,16 +93,31 @@
 @media (min-width: @tablet-width) {
   .intro {
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    min-height: 260px;
+    padding-top: 69px;
+    line-height: 1.20;
+  }
+
+  .intro__page-title {
+    font-size: 50px;
   }
 
   .intro__wrapper {
     width: 300px;
-    height: 400px;
-    padding: 100px 320px 110px 0;
+    height: 417px;
+    padding: 22px 320px 110px 0;
     margin-right: auto;
     margin-left: auto;
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-position: -40px bottom;
+  }
+
+  .intro__description {
+    font-size: 18px;
+  }
+
+  .intro__btn-download {
+    width: 300px;
   }
 
   .intro__slogan {

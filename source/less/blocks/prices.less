@@ -79,6 +79,7 @@
   height: 26px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 
   &--checked {
     background-image: url("../img/icon-yes.svg");
@@ -95,6 +96,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .prices {
+    padding-bottom: 40px;
+  }
+
   .prices__wrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -111,15 +116,40 @@
 
   .prices__tariff {
     min-width: 150px;
+    width: 25%;
+    padding: 20px 20px 15px;
 
     &--invisible {
       display: table-cell;
       background: transparent;
       border: none;
     }
+
+    &--popular {
+      &::before {
+        content: url("../img/bg-hit-tablet.svg");
+      }
+
+      &::after {
+        left: 6px;
+      }
+    }
+  }
+
+  .prices__name {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .prices__price {
+    font-size: 18px;
   }
 
   .prices__feature {
+    text-transform: none;
+    padding: 8px 25px 8px 15px;
+    line-height: 30px;
+
     &--header {
       display: table-cell;
     }
@@ -131,6 +161,7 @@
 
   .prices__icon {
     left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 

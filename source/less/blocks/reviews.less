@@ -33,18 +33,35 @@
 }
 
 @media (min-width: @tablet-width) {
+  .reviews {
+    padding-top: 35px;
+    padding-bottom: 23px;
+  }
+
   .reviews__item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
   }
 
   .reviews__bio {
     .text-small();
     display: block;
+    font-size: 14px;
+    line-height: 36px;
   }
 
   .reviews__author {
     order: 1;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 35px;
   }
 }
 

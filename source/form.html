@@ -13,7 +13,7 @@
           <picture>
             <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg 1x">
             <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg 1x">
-            <img class="logo logo--small page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="22">
+            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink">
           </picture>
         </a>
         <button class="page-header__nav-toggle" type="button">Открыть меню</button>
@@ -42,9 +42,9 @@
         </div>
       </section>
       <section class="contest-form">
-        <p class="contest-form__title wrapper">Поделитесь своей историей и получите шанс выиграть ценный приз &ndash; 1000 миль на вашу бонусную карту!</p>
+        <p class="contest-form__title wrapper">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!<span class="contest-form__title--extended"> Пожалуйста, заполните форму ниже:</span></p>
         <form class="contest-form__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="wrapper contest-form__group contest-form__group--full-name">
+          <div class="contest-form__group contest-form__group--full-name">
             <div class="text-input contest-form__input">
               <label class="label text-input__label" for="surname">Фамилия:</label>
               <input class="text-input__field" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
@@ -87,21 +87,21 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="wrapper fieldset fieldset--no-mobile contest-form__group contest-form__group--contacts wrapper">
+          <fieldset class="fieldset fieldset--no-mobile contest-form__group contest-form__group--contacts">
             <legend class="label fieldset__label fieldset__label--no-mobile">Контактная информация</legend>
             <div class="contest-form__inner-wrapper">
-              <div class="text-input contest-form__contact">
-                <label class="label text-input__label" for="phone">Номер телефона</label>
-                <input class="text-input__field" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+              <div class="text-input text-input--contact text-input--phone contest-form__contact">
+                <label class="label text-input__label text-input__label--contact" for="phone">Номер телефона</label>
+                <input class="text-input__field text-input__field--contact" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
               </div>
-              <div class="text-input contest-form__contact">
-                <label class="label text-input__label" for="email">Адрес почты</label>
-                <input class="text-input__field" type="email" id="email"  name="email" placeholder="Введите почту *" required>
+              <div class="text-input text-input--contact text-input--email contest-form__contact">
+                <label class="label text-input__label text-input__label--contact" for="email">Адрес почты</label>
+                <input class="text-input__field text-input__field--contact" type="email" id="email"  name="email" placeholder="Введите почту *" required>
               </div>
             </div>
           </fieldset>
           <fieldset class="wrapper fieldset contest-form__group contest-form__group--app">
-            <legend class="label fieldset__label fieldset__label--grey">С каким приложением путешествовали?</legend>
+            <legend class="label fieldset__label fieldset__label--grey fieldset__label--short">С каким приложением путешествовали?</legend>
             <div class="radio-group">
               <input class="radio-group__input" type="radio" id="ios" name="app" value="ios" checked>
               <label class="radio-group__label" for="ios">Pink для iOS</label>
@@ -116,10 +116,10 @@
             </div>
           </fieldset>
           <fieldset class="wrapper fieldset textarea contest-form__group contest-form__group--emotions">
-            <legend class="label fieldset__label textarea__label" for="textarea">Опишите свои эмоции</legend>
+            <legend class="label fieldset__label fieldset__label--long textarea__label" for="textarea">Опишите свои эмоции</legend>
             <textarea class="textarea__input" id="textarea" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
-          <div class="wrapper contest-form__group contest-form__group--action-bar">
+          <div class="contest-form__group contest-form__group--action-bar">
             <input class="contest-form__submit-btn form-btn" type="submit" value="Отправить форму">
             <p class="footnote contest-form__footnote"><span class="footnote__asterisk">*</span> &mdash; обязательные <span class="footnote__expanded">для заполнения</span> поля</p>
           </div>

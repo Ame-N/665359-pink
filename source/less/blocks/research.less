@@ -4,7 +4,8 @@
 
 .research__title {
   .text-headers();
-  font-size: 40px;
+  font-size: 30px;
+  line-height: 36px;
 }
 
 .research__text {
@@ -15,6 +16,8 @@
 .research__link {
   color: @color-pink;
   text-decoration: underline;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 @media (min-width: @tablet-width) {
@@ -26,20 +29,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 60px;
-    padding-bottom: 65px;
+    padding: 57px 10px 65px 0;
   }
 
   .research__timer {
     position: relative;
+    width: 275px;
+    height: 275px;
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
 
     &::before {
       .text-headers();
       display: block;
       content: "24";
       position: absolute;
-      top: 70px;
-      left: 50px;
+      top: 55px;
+      left: 18px;
       font-size: 96px;
       color: @color-pink;
       text-align: center;
@@ -52,7 +59,17 @@
   }
 
   .research__content {
-    width: 310px;
+    width: 300px;
+    padding-top: 10px;
+  }
+
+  .research__title {
+    width: 250px;
+    margin: 0;
+  }
+
+  .research__text {
+    margin: 10px 0;
   }
 }
 
