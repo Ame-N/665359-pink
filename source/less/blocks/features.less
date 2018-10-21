@@ -1,8 +1,9 @@
 .features {
   .reset-list();
+  .positioner;
   display: flex;
   flex-direction: column;
-  padding: 85px 20px 0 20px;
+  padding-top: 85px;
 }
 
 .features__item {
@@ -76,20 +77,50 @@
 @media (min-width: @desktop-width) {
   .features {
     flex-direction: row;
-    max-width: @desktop-width;
-    margin-right: auto;
-    margin-left: auto;
+    justify-content: space-around;
+    height: auto;
   }
 
   .features__item {
     text-align: center;
+    box-sizing: border-box;
+    width: 240px;
+    margin-bottom: 55px;
+    margin-right: 20px;
 
     &--desktop {
       display: block;
     }
 
     &--phone {
+      width: auto;
       height: auto;
+      padding: 0;
     }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .features__phone-img {
+    width: 292px;
+    height: 302px;
+    padding-top: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .features__name {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+
+  .features__text {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

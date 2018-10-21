@@ -58,7 +58,7 @@
 .prices__feature {
   .text-regular();
   position: relative;
-  padding: 22px 20px;
+  padding: 22px;
   text-transform: uppercase;
   border: 1px solid @color-light-borders;
   background-color: @color-white;
@@ -83,6 +83,8 @@
 
   &--checked {
     background-image: url("../img/icon-yes.svg");
+    width: 30px;
+    height: 30px;
   }
 
   &--unchecked {
@@ -124,25 +126,10 @@
       background: transparent;
       border: none;
     }
-
-    &--popular {
-      &::before {
-        content: url("../img/bg-hit-tablet.svg");
-      }
-
-      &::after {
-        left: 6px;
-      }
-    }
   }
 
   .prices__name {
-    font-size: 16px;
     margin-bottom: 8px;
-  }
-
-  .prices__price {
-    font-size: 18px;
   }
 
   .prices__feature {
@@ -165,7 +152,34 @@
   }
 }
 
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .prices__name {
+    font-size: 16px;
+  }
+
+  .prices__price {
+    font-size: 18px;
+  }
+
+  .prices__tariff {
+    &--popular {
+      &::before {
+        content: url("../img/bg-hit-tablet.svg");
+      }
+
+      &::after {
+        left: 6px;
+      }
+    }
+  }
+}
+
 @media (min-width: @desktop-width) {
+  .prices {
+    padding-top: 150px;
+    padding-bottom: 66px;
+  }
+
   .prices__wrapper {
     padding-left: 10px;
     padding-right: 10px;
@@ -173,5 +187,11 @@
 
   .prices__tariff {
     min-width: 235px;
+    padding: 20px;
+  }
+
+  .prices__feature {
+    font-size: 18px;
+    padding: 15px 25px 16px 22px;
   }
 }

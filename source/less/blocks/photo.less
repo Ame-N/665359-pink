@@ -3,8 +3,8 @@
   width: 280px;
 
   &--dayly {
-    padding-left: 20px;
-    padding-right: 20px;
+    .positioner;
+    width: @mobile-width;
   }
 }
 
@@ -151,13 +151,22 @@
 
 @media (min-width: @desktop-width) {
   .photo {
+    margin-bottom: 54px;
+
     &--dayly {
       align-items: center;
-
-      & .photo__wrapper {
-        box-sizing: border-box;
-        max-width: 940px;
-      }
+      margin-bottom: 28px;
     }
+  }
+
+  .photo__wrapper {
+    &--dayly {
+      padding: 5px 30px 5px 28px;
+      min-height: 98px;
+    }
+  }
+
+  .photo__author {
+    line-height: 14px;
   }
 }

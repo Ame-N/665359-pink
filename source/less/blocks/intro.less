@@ -47,7 +47,7 @@
   display: block;
   width: inherit;
   height: inherit;
-  background: transparent center no-repeat;
+  background: transparent center bottom no-repeat;
 
   &--apple {
     background-image: url("../img/logo-apple.svg");
@@ -67,11 +67,15 @@
   line-height: 24px;
   text-align: center;
   margin: 0;
+  padding: 0 30px;
 }
 
 .intro__btn-download {
+  .text-headers();
   width: 280px;
   padding: 14px;
+  margin-left: auto;
+  margin-right: auto;
 
   &:hover {
     background-color: @color-white;
@@ -114,10 +118,15 @@
 
   .intro__description {
     font-size: 18px;
+    padding: 0;
   }
 
   .intro__btn-download {
     width: 300px;
+  }
+
+  .intro__store-icon {
+    background-position: center;
   }
 
   .intro__slogan {
@@ -132,17 +141,35 @@
 @media (min-width: @desktop-width) {
   .intro {
     background-image: url("../img/bg-back-desktop@1x.jpg");
+    width: 100%;
+    padding-top: 64px;
+    min-height: 220px;
+  }
+
+  .intro__page-title {
+    &--photos {
+      width: 500px;
+      margin: 0 auto;
+    }
   }
 
   .intro__wrapper {
-    padding-right: 640px;
+    padding: 43px 640px 120px 0;
     max-width: @desktop-width;
-    height: 500px;
+    height: 515px;
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: -25px bottom;
+    background-position: 15px bottom;
+  }
+
+  .intro__slogan {
+    font-size: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .intro__btn-download {
     width: 300px;
+    font-size: 21px;
+    padding: 10px 14px 13px;
   }
 }

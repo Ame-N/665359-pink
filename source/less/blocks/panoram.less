@@ -50,7 +50,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .panoram__img {
+  .panoram {
     max-width: 1200px;
+  }
+
+  .panoram__label {
+    &::after {
+      top: -452px;
+    }
   }
 }

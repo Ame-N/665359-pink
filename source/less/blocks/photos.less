@@ -6,6 +6,7 @@
 
 .photos__title {
   .text-regular();
+  .positioner;
   margin-top: 45px;
   margin-bottom: 50px;
   padding-left: 35px;
@@ -16,6 +17,7 @@
 
 .photos__footer {
   .text-regular();
+  .positioner;
   line-height: 30px;
   text-align: center;
   margin-top: 22px;
@@ -23,6 +25,7 @@
 }
 
 .photos__content {
+  .positioner;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -47,7 +50,14 @@
 }
 
 @media (min-width: @desktop-width) {
-  .photos__content {
-    max-width: @desktop-width - 20;
+  .photos__title {
+    width: 700px;
+    margin-bottom: 60px;
+  }
+
+  .photos__footer {
+    margin-top: 0;
+    padding-top: 5px;
+    padding-bottom: 22px;
   }
 }

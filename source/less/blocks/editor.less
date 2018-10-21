@@ -1,4 +1,5 @@
 .editor {
+  .positioner;
   padding-top: 20px;
   padding-bottom: 40px;
   background-color: @color-grey;
@@ -127,6 +128,7 @@
 }
 
 .editor__btn {
+  .text-headers();
   width: 280px;
   padding: 14px;
 
@@ -183,6 +185,7 @@
     display: flex;
     justify-content: space-between;
     padding: 57px 33px 52px 20px;
+    margin-bottom: 10px;
   }
 
   .editor__img {
@@ -213,7 +216,7 @@
     &::after {
       content: "";
       position: absolute;
-      left: 0px;
+      left: 0;
       bottom: -22px;
       height: 0;
       width: 275px;
@@ -275,13 +278,14 @@
   .editor {
     box-sizing: border-box;
     max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 87px;
     padding: 57px 80px;
+    padding-right: 60px;
   }
 
   .editor__action-bar {
-    width: 410px;
+    width: 430px;
+    padding-top: 0;
   }
 
   .editor__btn {
@@ -293,7 +297,41 @@
     }
   }
 
+  .editor__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 26px;
+    margin-right: 45px;
+
+    &::after {
+      width: 410px;
+      bottom: -10px;
+    }
+
+    &--contrast {
+      width: 35px;
+      height: 35px;
+
+      &::after {
+        bottom: -18px;
+      }
+    }
+  }
+
+  .editor__range-group {
+    padding-right: 30px;
+  }
+
   .editor__range {
-    min-width: 288px;
+    width: 288px;
+  }
+
+  .editor__btn {
+    width: 182px;
+    padding-right: 0;
+
+    &--submit {
+      margin-right: 40px;
+    }
   }
 }
