@@ -1,6 +1,78 @@
 .main-nav {
-  .reset-list();
   background-color: @color-main;
+
+  &--opened {
+    & .main-nav__toggle {
+      background-image: url("../img/icon-menu-cross.svg");
+    }
+
+    & .main-nav__list {
+      display: inherit;
+    }
+  }
+
+  &--closed {
+    background-color: @color-menu-closed;
+
+    & .main-nav__toggle {
+      width: 50px;
+      background-image: url("../img/icon-menu-burger.svg");
+    }
+
+    & .main-nav__list {
+      display: none;
+    }
+
+    & .main-nav__main-bar {
+      border: none;
+    }
+  }
+
+  &--nojs {
+    background-color: @color-main;
+
+    & .main-nav__toggle {
+      display: none;
+    }
+
+    & .main-nav__list {
+      display: inherit;
+    }
+  }
+}
+
+.main-nav__main-bar {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid @color-menu-dark;
+}
+
+.main-nav__logo {
+   width: 75px;
+   height: 22px;
+ }
+
+.main-nav__toggle {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+  font-size: 0;
+  background-color: @color-main;
+  cursor: pointer;
+}
+
+.main-nav__list {
+  .reset-list();
   color: @color-white;
 }
 
@@ -26,9 +98,50 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .main-nav__main-bar {
+    padding-bottom: 40px;
+    align-items: flex-end;
+  }
+
+  .main-nav__logo {
+    width: 148px;
+    height: 45px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .main-nav {
+    background-color: @color-menu-closed;
+
+    &--closed {
+      & .main-nav__list {
+        display: flex;
+      }
+    }
+  }
+
+  .main-nav__wrapper {
+    max-width: @desktop-width;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-nav__main-bar {
+    padding-left: 10px;
+    margin: 0;
+    margin-right: auto;
+    border: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 
   .main-nav__item {
@@ -36,7 +149,7 @@
     border: none;
 
     &:last-child {
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
 

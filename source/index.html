@@ -13,31 +13,38 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__main-bar wrapper">
-        <a href="#">
-          <picture>
-            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg 1x">
-            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg 1x">
-            <img class="logo logo--small page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="22">
-          </picture>
-        </a>
-        <button class="page-header__nav-toggle" type="button">Открыть меню</button>
-      </div>
-      <nav class="page-header__nav">
-        <ul class="main-nav">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a>
-          </li>
-        </ul>
+      <!--
+      main-nav - класс блока, отвечающего за меню;
+      main-nav--opened и main-nav--closed - отвечают за открытие и закрытие меню;
+      main-nav--nojs - состояние при отключенном javascript;
+      -->
+      <nav class="page-header__nav main-nav main-nav--opened">
+        <div class="main-nav__wrapper">
+          <div class="main-nav__main-bar">
+            <a href="index.html">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg 1x">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg 1x">
+                <img class="logo logo--small main-nav__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="22">
+              </picture>
+            </a>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <section class="intro">
         <div class="intro__wrapper">
@@ -207,5 +214,6 @@
       </ul>
       <p class="page-footer__copyright">Разработано <a class="page-footer__developer-logo" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a></p>
     </footer>
+    <script src="js/main-nav.js"></script>
   </body>
 </html>

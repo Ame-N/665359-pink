@@ -1,58 +1,19 @@
 .page-header {
-  background-color: @color-main;
-}
-
-.page-header__logo {
-  width: 75px;
-  height: 22px;
-}
-
-.page-header__main-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 22px;
-  padding-bottom: 22px;
-}
-
-.page-header__nav-toggle {
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  margin: 0;
-  background-image: url("../img/icon-menu-burger.svg");
+  background-color: @color-main-dark;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  border: none;
-  outline: none;
-  font-size: 0;
-  background-color: @color-main;
-  cursor: pointer;
+  background-position: center;
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__main-bar {
-    padding-bottom: 40px;
-  }
-
-  .page-header__logo {
-    width: 148px;
-    height: 45px;
+  .page-header {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .page-header__main-bar {
-    margin: 0;
-    margin-right: auto;
-  }
-
-  .page-header__nav-toggle {
-    display: none;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
   }
 }
