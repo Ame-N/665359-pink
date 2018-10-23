@@ -1,6 +1,6 @@
 .page-footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  .positioner;
+  padding: 42px 20px 40px;
   text-align: center;
 
   &--index {
@@ -9,15 +9,17 @@
 }
 
 .page-footer__logo {
-  margin-bottom: 40px;
+  margin-bottom: 33px;
 }
 
 .page-footer__social {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .page-footer__copyright {
   .text-regular();
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .page-footer__developer-logo {
@@ -27,11 +29,37 @@
   font-size: 0;
   background-image: url("../img/logo-htmlacademy.svg");
   vertical-align: middle;
+  margin-left: 12px;
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
+    padding-top: 27px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 5px;
+  }
+
+  .page-footer__social {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding-top: 12px;
+  }
+
+  .page-footer__copyright {
+    font-size: 18px;
+  }
+
+  .page-footer__developer-logo {
+    margin-left: 9px;
   }
 }

@@ -1,0 +1,64 @@
+.panoram {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.panoram__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.panoram__label {
+  position: relative;
+
+  &::after {
+    .text-small(bold);
+    content: "Панорама дня";
+    position: absolute;
+    box-sizing: border-box;
+    width: 140px;
+    padding: 12px 5px;
+    right: 0;
+    top: -137px;
+    text-align: center;
+    background-color: @color-pink;
+    text-transform: uppercase;
+    color: @color-white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .panoram {
+    max-width: @tablet-width;
+    overflow: hidden;
+  }
+
+  .panoram__img {
+    width: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .panoram__label {
+    &::after {
+      top: -455px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .panoram {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  .panoram__label {
+    &::after {
+      top: -452px;
+    }
+  }
+}

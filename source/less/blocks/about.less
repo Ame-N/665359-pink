@@ -1,14 +1,52 @@
+.about {
+  padding-top: 45px;
+}
+
 .about__title {
   .text-large();
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 35px;
+  }
 }
 
 .about__features {
-  background-color: @color-grey;
+  background: @color-grey url("../img/bg-triangle-white.svg") no-repeat 100% 0;
+  background-size: cover;
 }
 
 @media (min-width: @tablet-width) {
+  .about {
+    padding-top: 50px;
+  }
+
   .about__title {
     .text-extralarge();
+    margin-bottom: 0;
+
+    &:last-child {
+      width: 500px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 50px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    padding-top: 70px;
+  }
+
+  .about__title {
+    font-size: 50px;
+
+    &:last-child {
+      margin-bottom: 77px;
+    }
   }
 }

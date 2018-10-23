@@ -1,6 +1,6 @@
 .form-btn {
   .text-headers();
-  padding: 25px 5px;
+  padding: 22px 5px;
   text-transform: uppercase;
   color: @color-white;
   background-color: @color-green;
@@ -9,5 +9,13 @@
 
   &:focus {
     outline: none;
+  }
+
+  &:hover {
+    background-color: @color-green-dark;
+  }
+
+  &:active {
+    color: fade(@color-white, 30%);
   }
 }

@@ -6,6 +6,7 @@
 
 .contact__info {
   margin: 0;
+  margin-top: 5px;
 }
 
 .contact__info,
@@ -13,4 +14,28 @@
   .text-large();
   color: @color-pink;
   text-decoration: none;
+}
+
+.contact__mail-link {
+  &:hover {
+    color: @color-main;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: fade(@color-main, 30%);
+    text-decoration: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contact__info {
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact__info {
+    margin-top: 27px;
+  }
 }

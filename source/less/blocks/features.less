@@ -1,13 +1,14 @@
 .features {
   .reset-list();
+  .positioner;
   display: flex;
   flex-direction: column;
-  padding-top: 55px;
+  padding-top: 85px;
 }
 
 .features__item {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 
   &:last-child {
     margin-bottom: 0;
@@ -18,7 +19,7 @@
   }
 
   &--phone {
-    height: 277px;
+    height: 282px;
     overflow: hidden;
   }
 }
@@ -26,7 +27,7 @@
 .features__name {
   .text-headers();
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .features__text {
@@ -35,39 +36,91 @@
   line-height: 24px;
 }
 
+.features__phone-img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 5px;
+}
+
 @media (min-width: @tablet-width) {
   .features {
     flex-wrap: wrap-reverse;
-    height: 500px;
+    height: 485px;
+    padding-top: 0;
+    justify-content: flex-end;
   }
 
   .features__item {
     width: 310px;
     text-align: left;
+    margin-bottom: 38px;
+
+    &:nth-child(3) {
+      margin-bottom: 45px;
+    }
 
     &--phone {
+      padding-top: 0;
       height: 100%;
     }
+  }
+
+  .features__phone-img {
+    margin: 0;
+    padding-top: 4px;
+    height: 481px;
+    width: 268px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .features {
     flex-direction: row;
-    max-width: @desktop-width;
-    margin-right: auto;
-    margin-left: auto;
+    justify-content: space-around;
+    height: auto;
   }
 
   .features__item {
     text-align: center;
+    box-sizing: border-box;
+    width: 240px;
+    margin-bottom: 55px;
+    margin-right: 20px;
 
     &--desktop {
       display: block;
     }
 
     &--phone {
+      width: auto;
       height: auto;
+      padding: 0;
     }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .features__phone-img {
+    width: 292px;
+    height: 302px;
+    padding-top: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .features__name {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+
+  .features__text {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

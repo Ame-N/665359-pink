@@ -1,15 +1,12 @@
 .fieldset {
   box-sizing: border-box;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
   border: none;
 }
 
 .fieldset__label {
   line-height: 18px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: @tablet-width - 1) {
@@ -23,6 +20,12 @@
     &--no-mobile {
       display: none;
     }
+
+    &--grey {
+      width: 100%;
+      padding: 100px 20px 0;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -32,6 +35,26 @@
   }
 
   .fieldset__label {
-    padding: 0 32px;
+    padding: 0 30px;
+
+    &--short {
+      padding: 0 25px;
+    }
+
+    &--long {
+      padding: 0 40px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset__label {
+    &--short {
+      min-width: 368px;
+    }
+
+    &--no-mobile {
+      margin-bottom: 16px;
+    }
   }
 }

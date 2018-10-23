@@ -1,16 +1,28 @@
 .textarea {
   text-align: center;
+  padding: 0 20px;
+}
+
+.textarea__label {
+  margin-bottom: 15px;
 }
 
 .textarea__input {
   box-sizing: border-box;
   width: 100%;
+  max-width: 280px;
   height: 200px;
-  padding: 22px;
+  padding: 15px 19px;
   border: 2px solid @color-light-borders;
 
+  &:active,
   &:focus {
     outline: none;
+    border-color: @color-pink;
+  }
+
+  &:hover {
+    border-color: @color-main;
   }
 
   &::-webkit-input-placeholder {
@@ -32,5 +44,26 @@
     color: @color-main;
     line-height: 30px;
     font-family: @font-family;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .textarea {
+    padding: 22px 58px 45px;
+  }
+
+  .textarea__input {
+    height: 195px;
+    max-width: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .textarea {
+    padding-bottom: 40px;
+  }
+
+  .textarea__input {
+    height: 125px;
   }
 }
