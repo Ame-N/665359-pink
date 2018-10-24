@@ -210,12 +210,27 @@
           </picture>
           <div class="editor__action-bar">
             <div class="editor__input-group">
-              <label class="editor__icon editor__icon--clip" for="clip">Обрезка</label>
+              <label class="editor__label" for="clip">
+                <span class="visually-hidden">Обрезка</span>
+                <svg class="editor__icon editor__icon--active editor__icon--clip" width="48" height="48">
+                  <use xlink:href="img/sprite.svg#editor-crop"></use>
+                </svg>
+              </label>
               <input class="editor__range" type="range" id="clip" name="clip" min="0" max="100" step="1" value="78">
-              <label class="editor__icon editor__icon--color" for="color">Цвет</label>
+              <label class="editor__label" for="color">
+                <span class="visually-hidden">Цвет</span>
+                <svg class="editor__icon editor__icon--color" width="48" height="48">
+                  <use xlink:href="img/sprite.svg#editor-fill"></use>
+                </svg>
+              </label>
               <input class="editor__range" type="range" id="color" name="color" min="0" max="100" step="1" value="12">
-              <label class="editor__icon editor__icon--contrast" for="brightness">Яркость</label>
-              <input class="editor__range" type="range" id="brightness" name="brightness" min="0" max="100" step="1" value="50">
+              <label class="editor__label" for="contrast">
+                <span class="visually-hidden">Контраст</span>
+                <svg class="editor__icon editor__icon--contrast" width="31.92" height="31.92">
+                  <use xlink:href="img/sprite.svg#editor-contrast"></use>
+                </svg>
+              </label>
+              <input class="editor__range" type="range" id="contrast" name="brightness" min="0" max="100" step="1" value="50">
             </div>
             <div class="editor__button-group">
               <input class="btn editor__btn editor__btn--submit" type="submit" value="Запостить">
@@ -241,7 +256,15 @@
           <a class="social__link social__link--youtube" href="https://www.youtube.com/">YouTube</a>
         </li>
       </ul>
-      <p class="page-footer__copyright">Разработано <a class="page-footer__developer-logo" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a></p>
+      <p class="page-footer__copyright">
+        Разработано
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+          <svg class="page-footer__developer-logo" width="26.943" height="34.09">
+            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
     </footer>
     <script src="js/main-nav.js"></script>
   </body>

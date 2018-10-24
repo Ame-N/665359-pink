@@ -17,32 +17,21 @@
   flex-wrap: wrap;
 }
 
-.editor__icon {
+.editor__label {
   display: block;
   position: relative;
-  width: 48px;
-  height: 48px;
   margin-right: 32px;
   margin-bottom: 35px;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-size: 0;
 
   &:last-of-type {
     margin-right: 0;
   }
+}
 
-  &--clip {
-    background-image: url("../img/icon-editor-crop.svg");
-  }
-
-  &--color {
-    background-image: url("../img/icon-editor-fill.svg");
-  }
-
-  &--contrast {
-    background-image: url("../img/icon-editor-contrast.svg");
-  }
+.editor__icon {
+  width: 48px;
+  height: 48px;
+  fill: @color-main;
 }
 
 .editor__range {
@@ -172,7 +161,7 @@
 }
 
 @media (max-width: @tablet-width - 1) {
-  .editor__icon {
+  .editor__label {
     &:first-child::after {
       content: "";
       position: absolute;
@@ -181,6 +170,28 @@
       height: 0;
       width: 320px;
       border-bottom: 1px solid @color-light-borders;
+    }
+  }
+
+  .editor__icon {
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      fill: @color-pink;
+      opacity: 1;
+    }
+
+    &--active {
+      fill: @color-pink;
+      opacity: 1;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
@@ -217,11 +228,8 @@
     }
   }
 
-  .editor__icon {
-    width: 25px;
-    height: 25px;
+  .editor__label {
     margin: 24px 25px 24px 15px;
-    background-size: contain;
     position: relative;
 
     &::after {
@@ -233,16 +241,12 @@
       width: 275px;
       border-bottom: 1px solid @color-light-borders;
     }
+  }
 
-    &--contrast {
-      width: 20px;
-      height: 20px;
-      margin-left: 20px;
-
-      &::after {
-        left: -5px;
-      }
-    }
+  .editor__icon {
+    width: 25px;
+    height: 25px;
+    fill: @color-pink;
   }
 
   .editor__action-bar {
@@ -293,25 +297,18 @@
     }
   }
 
-  .editor__icon {
-    width: 48px;
-    height: 48px;
+  .editor__label {
     margin: 14px 25px 14px 20px;
 
     &::after {
       width: 410px;
       bottom: -10px;
     }
+  }
 
-    &--contrast {
-      width: 35px;
-      height: 35px;
-      margin-left: 25px;
-
-      &::after {
-        bottom: -18px;
-      }
-    }
+  .editor__icon {
+    width: 48px;
+    height: 48px;
   }
 
   .editor__range {
