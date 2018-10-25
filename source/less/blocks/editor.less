@@ -15,6 +15,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .editor__label {
@@ -37,6 +38,7 @@
 .editor__range {
   appearance: none;
   width: 240px;
+  min-height: 20px; //for IE11
   background: transparent;
   margin-bottom: 73px;
 
@@ -113,12 +115,6 @@
     cursor: pointer;
     border-top: 2px solid @color-main;
   }
-}
-
-.editor__action-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .editor__btn {
@@ -207,6 +203,12 @@
 
   .editor__img {
     margin-bottom: 0;
+  }
+
+  .editor__action-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .editor__input-group {

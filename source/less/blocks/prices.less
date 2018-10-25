@@ -1,6 +1,7 @@
 .prices {
   background: @color-grey url("../img/bg-triangle-white.svg") no-repeat 100% 0;
   background-size: cover;
+  background-position-y: -2px;
   padding-top: 85px;
   padding-bottom: 45px;
 }
@@ -67,6 +68,7 @@
   text-transform: uppercase;
   border: 1px solid @color-light-borders;
   background-color: @color-white;
+  background-clip: padding-box;
 
   &--header {
     display: none;
@@ -76,8 +78,7 @@
 .prices__icon {
   display: block;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 20px;
   right: 20px;
   font-size: 0;
   width: 26px;
