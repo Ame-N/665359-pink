@@ -11,6 +11,7 @@
 
 .reviews__author {
   .text-headers();
+  color: @color-black;
   font-style: normal;
 }
 
@@ -120,15 +121,15 @@
     cursor: pointer;
     transform: rotate(45deg);
     outline: none;
-    border: 2px solid fade(@color-main, 30%);
+    border: 2px solid @color-main-30;
     padding: 0;
 
     &:hover {
-      border-color: fade(@color-main, 60%);
+      border-color: @color-main-60;
     }
 
     &:active {
-      border-color: fade(@color-main, 10%);
+      border-color: @color-main-10;
     }
 
     &--prev {

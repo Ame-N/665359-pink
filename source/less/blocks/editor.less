@@ -21,11 +21,11 @@
 .editor__label {
   display: block;
   position: relative;
-  margin-right: 32px;
-  margin-bottom: 35px;
+  margin-right: 37px;
+  margin-bottom: 23px;
 
   &:last-of-type {
-    margin-right: 0;
+    margin-right: 14px;
   }
 }
 
@@ -33,14 +33,20 @@
   width: 48px;
   height: 48px;
   fill: @color-main;
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .editor__range {
   appearance: none;
   width: 240px;
   min-height: 20px; //for IE11
+  padding: 0; //for IE11
   background: transparent;
-  margin-bottom: 73px;
+  margin-bottom: 65px;
 
   &:first-of-type {
     order: 1;
@@ -134,24 +140,24 @@
     }
 
     &:active {
-      color: fade(@color-white, 30%);
+      color: @color-main-30;
     }
   }
 
   &--reset {
     background-color: transparent;
-    border-color: fade(@color-main, 10%);
-    color: fade(@color-main, 10%);
+    border-color: @color-main-10;
+    color: @color-main-10;
 
     &:hover {
-      border-color: fade(@color-main, 30%);
-      color: fade(@color-main, 30%);
+      border-color: @color-main-30;
+      color: @color-main-30;
     }
 
     &:active {
       border-color: transparent;
-      background-color: fade(@color-main, 30%);
-      color: fade(@color-white, 30%);
+      background-color: @color-main-30;
+      color: @color-white-30;
     }
   }
 }
@@ -162,7 +168,7 @@
       content: "";
       position: absolute;
       left: -55px;
-      bottom: -75px;
+      bottom: -70px;
       height: 0;
       width: 320px;
       border-bottom: 1px solid @color-light-borders;
@@ -205,12 +211,6 @@
     margin-bottom: 0;
   }
 
-  .editor__action-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .editor__input-group {
     justify-content: space-between;
     margin-top: -18px;
@@ -231,7 +231,7 @@
   }
 
   .editor__label {
-    margin: 24px 25px 24px 15px;
+    margin: 23px 25px 23px 15px;
     position: relative;
 
     &::after {
@@ -249,15 +249,23 @@
     width: 25px;
     height: 25px;
     fill: @color-pink;
+
+    &--contrast {
+      width: 17px;
+      height: 17px;
+      padding-left: 4px;
+    }
   }
 
   .editor__action-bar {
     width: 275px;
     height: 400px;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-content: space-between;
+    align-items: center;
   }
 
   .editor__button-group {
@@ -289,6 +297,10 @@
     padding-top: 0;
   }
 
+  .editor__input-group {
+    margin-top: -15px;
+  }
+
   .editor__btn {
     width: 182px;
     padding: 15px 0 15px;
@@ -300,17 +312,26 @@
   }
 
   .editor__label {
-    margin: 14px 25px 14px 20px;
+    margin: 12px 25px 12px 20px;
 
     &::after {
       width: 410px;
       bottom: -10px;
+    }
+
+    &:last-of-type::after {
+      bottom: -18px;
     }
   }
 
   .editor__icon {
     width: 48px;
     height: 48px;
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   .editor__range {

@@ -2,8 +2,12 @@
   background-color: @color-main;
 
   &--opened {
-    & .main-nav__toggle {
-      background-image: url("../img/icon-menu-cross.svg");
+    & .main-nav__cross {
+      display: inherit;
+    }
+
+    & .main-nav__burger {
+      display: none;
     }
 
     & .main-nav__list {
@@ -16,7 +20,14 @@
 
     & .main-nav__toggle {
       width: 50px;
-      background-image: url("../img/icon-menu-burger.svg");
+    }
+
+    & .main-nav__burger {
+      display: inherit;
+    }
+
+    & .main-nav__cross {
+      display: none;
     }
 
     & .main-nav__list {
@@ -62,13 +73,24 @@
   height: 24px;
   padding: 0;
   margin: 0;
-  background-position: center;
-  background-repeat: no-repeat;
   border: none;
   outline: none;
   font-size: 0;
-  background-color: @color-main;
+  background-color: transparent;
   cursor: pointer;
+}
+
+.main-nav__burger,
+.main-nav__cross {
+  fill: @color-white;
+
+  &:hover {
+    fill: @color-pink;
+  }
+
+  &:active {
+    fill: @color-pink-30;
+  }
 }
 
 .main-nav__list {
@@ -94,7 +116,7 @@
   }
 
   &:active {
-    color: fade(@color-pink, 30%);
+    color: @color-pink-30;
   }
 }
 
@@ -158,7 +180,7 @@
     font-weight: normal;
 
     &:active {
-      color: fade(@color-white, 30%);
+      color: @color-white-30;
     }
 
     &--active {
