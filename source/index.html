@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>Пинк</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
@@ -62,13 +63,13 @@
           <a class="btn intro__btn-download" href="https://itunes.apple.com/">Скачать приложение</a>
           <ul class="intro__download-list">
             <li class="intro__download-item">
-              <a class="intro__store-icon intro__store-icon--apple" href="https://itunes.apple.com/">App Store</a>
+              <a class="intro__store-icon intro__store-icon--apple" href="https://itunes.apple.com/"><span class="visually-hidden">App Store</span></a>
             </li>
             <li class="intro__download-item">
-              <a class="intro__store-icon intro__store-icon--android" href="https://play.google.com/">Google Play</a>
+              <a class="intro__store-icon intro__store-icon--android" href="https://play.google.com/"><span class="visually-hidden">Google Play</span></a>
             </li>
             <li class="intro__download-item">
-              <a class="intro__store-icon intro__store-icon--windows" href="https://www.microsoft.com/ru-ru/store/apps/">Windows Store</a>
+              <a class="intro__store-icon intro__store-icon--windows" href="https://www.microsoft.com/ru-ru/store/apps/"><span class="visually-hidden">Windows Store</span></a>
             </li>
           </ul>
           <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -219,19 +220,21 @@
       </section>
     </main>
     <footer class="page-footer page-footer--index">
-      <picture>
-        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-        <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк" width="146" height="40">
-      </picture>
+      <a href="index.html">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк" width="146" height="40">
+        </picture>
+      </a>
       <ul class="page-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/">Twitter</a>
+          <a class="social__link social__link--twitter" href="https://twitter.com/"><span class="visually-hidden">Twitter</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://facebook.com/">Facebook</a>
+          <a class="social__link social__link--facebook" href="https://facebook.com/"><span class="visually-hidden">Facebook</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/">YouTube</a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/"><span class="visually-hidden">YouTube</span></a>
         </li>
       </ul>
       <p class="page-footer__copyright">
