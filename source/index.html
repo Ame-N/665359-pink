@@ -25,7 +25,7 @@
       main-nav--opened и main-nav--closed - отвечают за открытие и закрытие меню;
       main-nav--nojs - состояние при отключенном javascript;
       -->
-      <nav class="page-header__nav main-nav main-nav--closed">
+      <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__main-bar">
             <a href="index.html">
@@ -130,6 +130,7 @@
         </div>
       </section>
       <section class="reviews slider">
+        <h2 class="visually-hidden">Отзывы наших пользователей</h2>
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item">
             <cite class="reviews__author">
@@ -162,20 +163,21 @@
         <button class="reviews__btn reviews__btn--next" type="button">Следующий</button>
       </section>
       <section class="prices">
+        <h2 class="visually-hidden">Цены</h2>
         <div class="prices__wrapper slider">
           <table class="prices__table slider__list">
             <tr>
               <th class="prices__tariff prices__tariff--invisible"></th>
               <th class="prices__tariff">
-                <h3 class="prices__name">База</h3>
+                <b class="prices__name">База</b>
                 <span class="prices__price">1,99 USD</span>
               </th>
               <th class="prices__tariff prices__tariff--popular">
-                <h3 class="prices__name">Стандарт</h3>
+                <b class="prices__name">Стандарт</b>
                 <span class="prices__price">3,99 USD</span>
               </th>
               <th class="prices__tariff">
-                <h3 class="prices__name">Анлим</h3>
+                <b class="prices__name">Анлим</b>
                 <span class="prices__price">9,99 USD</span>
               </th>
             </tr>
@@ -206,6 +208,7 @@
         </div>
       </section>
       <section class="contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
         <div class="positioner">
           <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
           <ul class="contacts__contacts-list">
@@ -224,7 +227,7 @@
           </ul>
         </div>
         <div class="contacts__map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A306cba3031a276a8dae489041e4b55db267f68944eb10754191d0ee8c91f2abf&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+          <iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A306cba3031a276a8dae489041e4b55db267f68944eb10754191d0ee8c91f2abf&amp;source=constructor"></iframe>
         </div>
       </section>
     </main>

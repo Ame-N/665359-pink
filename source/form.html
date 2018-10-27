@@ -24,7 +24,7 @@
       main-nav--opened и main-nav--closed - отвечают за открытие и закрытие меню;
       main-nav--nojs - состояние при отключенном javascript;
       -->
-      <nav class="page-header__nav main-nav main-nav--closed">
+      <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__main-bar">
             <a href="index.html">
@@ -36,10 +36,10 @@
             </a>
             <button class="main-nav__toggle" type="button">
               <svg class="main-nav__burger" width="50" height="24">
-                <use xlink:href="img/sprite.svg#menu-burger"></use>
+                <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
               </svg>
               <svg class="main-nav__cross" width="24" height="24">
-                <use xlink:href="img/sprite.svg#menu-cross"></use>
+                <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
               </svg>
               <span class="visually-hidden">Открыть меню</span>
             </button>
@@ -68,7 +68,8 @@
         </div>
       </section>
       <section class="contest-form">
-        <p class="contest-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!<span class="contest-form__title--extended"> Пожалуйста, заполните форму ниже:</span></p>
+        <h2 class="visually-hidden">Конкурс</h2>
+        <p class="contest-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!<span class="contest-form__additional"> Пожалуйста, заполните форму ниже:</span></p>
         <form class="contest-form__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="contest-form__group contest-form__group--full-name">
             <div class="text-input contest-form__input">
@@ -144,7 +145,7 @@
             </div>
           </fieldset>
           <fieldset class="wrapper fieldset textarea contest-form__group contest-form__group--emotions">
-            <legend class="label fieldset__label fieldset__label--long textarea__label" for="textarea">Опишите свои эмоции</legend>
+            <legend class="label fieldset__label fieldset__label--long textarea__label">Опишите свои эмоции</legend>
             <textarea class="textarea__input" id="textarea" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="contest-form__group contest-form__group--action-bar">
