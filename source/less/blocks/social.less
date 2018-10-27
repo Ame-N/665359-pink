@@ -1,15 +1,17 @@
 .social {
   .reset-list();
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 5px;
+  width: 170px;
   display: flex;
-  justify-content: center;
-  font-size: 0;
+  justify-content: space-between;
   margin-bottom: 43px;
 }
 
 .social__item {
   width: 46px;
   height: 46px;
-  margin-right: 18px;
 
   &:last-child {
     margin-right: 0;
@@ -21,7 +23,7 @@
   height: inherit;
   display: block;
   background: @color-white center no-repeat;
-  border: 3px solid fade(@color-main, 10%);
+  border: 3px solid @color-main-10;
   border-radius: 50%;
 
   &:hover {
@@ -29,7 +31,7 @@
   }
 
   &:active {
-    border-color: fade(@color-main, 10%);
+    border-color: @color-main-10;
   }
 
   &--twitter {
@@ -48,6 +50,7 @@
 @media (min-width: @tablet-width) {
   .social {
     margin-bottom: 0;
+    width: 190px;
   }
 
   .social__item {
@@ -58,6 +61,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .social {
+    width: 170px;
+    padding-right: 0;
+  }
+
   .social__item {
     &:last-child {
       margin-right: -5px;

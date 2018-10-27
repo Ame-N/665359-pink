@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>Пинк</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensans.woff" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff" as="font">
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
@@ -28,7 +35,15 @@
                 <img class="logo logo--small main-nav__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="22">
               </picture>
             </a>
-            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <button class="main-nav__toggle" type="button">
+              <svg class="main-nav__burger" width="50" height="24">
+                <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+              </svg>
+              <svg class="main-nav__cross" width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
+              </svg>
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
           </div>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -54,13 +69,13 @@
           <a class="btn intro__btn-download" href="https://itunes.apple.com/">Скачать приложение</a>
           <ul class="intro__download-list">
             <li class="intro__download-item">
-              <a class="intro__store-icon intro__store-icon--apple" href="https://itunes.apple.com/">App Store</a>
+              <a class="intro__store-icon intro__store-icon--apple" href="https://itunes.apple.com/"><span class="visually-hidden">App Store</span></a>
             </li>
             <li class="intro__download-item">
-              <a class="intro__store-icon intro__store-icon--android" href="https://play.google.com/">Google Play</a>
+              <a class="intro__store-icon intro__store-icon--android" href="https://play.google.com/"><span class="visually-hidden">Google Play</span></a>
             </li>
             <li class="intro__download-item">
-              <a class="intro__store-icon intro__store-icon--windows" href="https://www.microsoft.com/ru-ru/store/apps/">Windows Store</a>
+              <a class="intro__store-icon intro__store-icon--windows" href="https://www.microsoft.com/ru-ru/store/apps/"><span class="visually-hidden">Windows Store</span></a>
             </li>
           </ul>
           <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -93,6 +108,9 @@
             </li>
             <li class="features__item features__item--phone">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
                 <img class="features__phone-img" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Приложение на телефоне">
@@ -211,23 +229,34 @@
       </section>
     </main>
     <footer class="page-footer page-footer--index">
-      <picture>
-        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-        <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк" width="146" height="40">
-      </picture>
+      <a href="index.html">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк" width="146" height="40">
+        </picture>
+      </a>
       <ul class="page-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/">Twitter</a>
+          <a class="social__link social__link--twitter" href="https://twitter.com/"><span class="visually-hidden">Twitter</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://facebook.com/">Facebook</a>
+          <a class="social__link social__link--facebook" href="https://facebook.com/"><span class="visually-hidden">Facebook</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/">YouTube</a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/"><span class="visually-hidden">YouTube</span></a>
         </li>
       </ul>
-      <p class="page-footer__copyright">Разработано <a class="page-footer__developer-logo" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a></p>
+      <p class="page-footer__copyright">
+        Разработано
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+          <svg class="page-footer__developer-logo" width="26.943" height="34.09">
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
     </footer>
     <script src="js/main-nav.js"></script>
+    <script src="js/svgxuse.js" defer></script>
   </body>
 </html>

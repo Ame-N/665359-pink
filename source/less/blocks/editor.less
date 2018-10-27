@@ -15,41 +15,38 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.editor__label {
+  display: block;
+  position: relative;
+  margin-right: 37px;
+  margin-bottom: 23px;
+
+  &:last-of-type {
+    margin-right: 14px;
+  }
 }
 
 .editor__icon {
-  display: block;
-  position: relative;
   width: 48px;
   height: 48px;
-  margin-right: 32px;
-  margin-bottom: 35px;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-size: 0;
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  &--clip {
-    background-image: url("../img/icon-editor-crop.svg");
-  }
-
-  &--color {
-    background-image: url("../img/icon-editor-fill.svg");
-  }
+  fill: @color-main;
 
   &--contrast {
-    background-image: url("../img/icon-editor-contrast.svg");
+    width: 32px;
+    height: 32px;
   }
 }
 
 .editor__range {
   appearance: none;
   width: 240px;
+  min-height: 20px; //for IE11
+  padding: 0; //for IE11
   background: transparent;
-  margin-bottom: 73px;
+  margin-bottom: 65px;
 
   &:first-of-type {
     order: 1;
@@ -94,6 +91,7 @@
   &::-ms-thumb {
     width: 14px;
     height: 14px;
+    margin-top: 0;
     background-color: @color-grey;
     border: 2px solid @color-pink;
     border-radius: 50%;
@@ -126,12 +124,6 @@
   }
 }
 
-.editor__action-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .editor__btn {
   .text-headers();
   width: 280px;
@@ -149,38 +141,60 @@
     }
 
     &:active {
-      color: fade(@color-white, 30%);
+      color: @color-white-30;
     }
   }
 
   &--reset {
     background-color: transparent;
-    border-color: fade(@color-main, 10%);
-    color: fade(@color-main, 10%);
+    border-color: @color-main-10;
+    color: @color-main-10;
 
     &:hover {
-      border-color: fade(@color-main, 30%);
-      color: fade(@color-main, 30%);
+      border-color: @color-main-30;
+      color: @color-main-30;
     }
 
     &:active {
       border-color: transparent;
-      background-color: fade(@color-main, 30%);
-      color: fade(@color-white, 30%);
+      background-color: @color-main-30;
+      color: @color-white-30;
     }
   }
 }
 
 @media (max-width: @tablet-width - 1) {
-  .editor__icon {
+  .editor__label {
     &:first-child::after {
       content: "";
       position: absolute;
       left: -55px;
-      bottom: -75px;
+      bottom: -70px;
       height: 0;
       width: 320px;
       border-bottom: 1px solid @color-light-borders;
+    }
+  }
+
+  .editor__icon {
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      fill: @color-pink;
+      opacity: 1;
+    }
+
+    &--active {
+      fill: @color-pink;
+      opacity: 1;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
@@ -217,11 +231,8 @@
     }
   }
 
-  .editor__icon {
-    width: 25px;
-    height: 25px;
-    margin: 24px 25px 24px 15px;
-    background-size: contain;
+  .editor__label {
+    margin: 23px 25px 23px 15px;
     position: relative;
 
     &::after {
@@ -233,25 +244,29 @@
       width: 275px;
       border-bottom: 1px solid @color-light-borders;
     }
+  }
+
+  .editor__icon {
+    width: 25px;
+    height: 25px;
+    fill: @color-pink;
 
     &--contrast {
-      width: 20px;
-      height: 20px;
-      margin-left: 20px;
-
-      &::after {
-        left: -5px;
-      }
+      width: 17px;
+      height: 17px;
+      padding-left: 4px;
     }
   }
 
   .editor__action-bar {
     width: 275px;
     height: 400px;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-content: space-between;
+    align-items: center;
   }
 
   .editor__button-group {
@@ -283,6 +298,10 @@
     padding-top: 0;
   }
 
+  .editor__input-group {
+    margin-top: -15px;
+  }
+
   .editor__btn {
     width: 182px;
     padding: 15px 0 15px;
@@ -293,24 +312,26 @@
     }
   }
 
-  .editor__icon {
-    width: 48px;
-    height: 48px;
-    margin: 14px 25px 14px 20px;
+  .editor__label {
+    margin: 12px 25px 12px 20px;
 
     &::after {
       width: 410px;
       bottom: -10px;
     }
 
-    &--contrast {
-      width: 35px;
-      height: 35px;
-      margin-left: 25px;
+    &:last-of-type::after {
+      bottom: -18px;
+    }
+  }
 
-      &::after {
-        bottom: -18px;
-      }
+  .editor__icon {
+    width: 48px;
+    height: 48px;
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
     }
   }
 

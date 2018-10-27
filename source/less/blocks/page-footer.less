@@ -1,6 +1,6 @@
 .page-footer {
   .positioner;
-  padding: 42px 20px 40px;
+  padding: 38px 20px 40px;
   text-align: center;
 
   &--index {
@@ -9,7 +9,7 @@
 }
 
 .page-footer__logo {
-  margin-bottom: 33px;
+  margin-bottom: 35px;
 }
 
 .page-footer__social {
@@ -26,10 +26,18 @@
   display: inline-block;
   width: 27px;
   height: 34px;
-  font-size: 0;
-  background-image: url("../img/logo-htmlacademy.svg");
   vertical-align: middle;
   margin-left: 12px;
+  fill: @color-pink;
+
+  &:hover {
+    fill: @color-main;
+  }
+
+  &:active {
+    fill: @color-main;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

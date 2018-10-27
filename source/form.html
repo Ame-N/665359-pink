@@ -28,7 +28,15 @@
                 <img class="logo logo--small main-nav__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="22">
               </picture>
             </a>
-            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <button class="main-nav__toggle" type="button">
+              <svg class="main-nav__burger" width="50" height="24">
+                <use xlink:href="img/sprite.svg#menu-burger"></use>
+              </svg>
+              <svg class="main-nav__cross" width="24" height="24">
+                <use xlink:href="img/sprite.svg#menu-cross"></use>
+              </svg>
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
           </div>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -114,17 +122,19 @@
           </fieldset>
           <fieldset class="fieldset contest-form__group contest-form__group--app">
             <legend class="label fieldset__label fieldset__label--grey fieldset__label--short">С каким приложением путешествовали?</legend>
-            <div class="radio-group">
-              <input class="radio-group__input" type="radio" id="ios" name="app" value="ios" checked>
-              <label class="radio-group__label" for="ios">Pink для iOS</label>
-            </div>
-            <div class="radio-group">
-              <input class="radio-group__input" type="radio" id="android" name="app" value="android">
-              <label class="radio-group__label" for="android">Pink на Android</label>
-            </div>
-            <div class="radio-group">
-              <input class="radio-group__input" type="radio" id="windows" name="app" value="windows">
-              <label class="radio-group__label" for="windows">Windows Phone</label>
+            <div class="contest-form__content">
+              <div class="radio-group">
+                <input class="radio-group__input" type="radio" id="ios" name="app" value="ios" checked>
+                <label class="radio-group__label" for="ios">Pink для iOS</label>
+              </div>
+              <div class="radio-group">
+                <input class="radio-group__input" type="radio" id="android" name="app" value="android">
+                <label class="radio-group__label" for="android">Pink на Android</label>
+              </div>
+              <div class="radio-group">
+                <input class="radio-group__input" type="radio" id="windows" name="app" value="windows">
+                <label class="radio-group__label" for="windows">Windows Phone</label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="wrapper fieldset textarea contest-form__group contest-form__group--emotions">
@@ -153,23 +163,34 @@
       </section>
     </main>
     <footer class="page-footer">
-      <picture>
-        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-        <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк" width="146" height="40">
-      </picture>
+      <a href="index.html">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Пинк" width="146" height="40">
+        </picture>
+      </a>
       <ul class="social page-footer__social">
         <li class="social__item">
-          <a href="https://twitter.com/" class="social__link social__link--twitter">Twitter</a>
+          <a class="social__link social__link--twitter" href="https://twitter.com/"><span class="visually-hidden">Twitter</span></a>
         </li>
         <li class="social__item">
-          <a href="https://facebook.com/" class="social__link social__link--facebook">Facebook</a>
+          <a class="social__link social__link--facebook" href="https://facebook.com/"><span class="visually-hidden">Facebook</span></a>
         </li>
         <li class="social__item">
-          <a href="https://www.youtube.com/" class="social__link social__link--youtube">YouTube</a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/"><span class="visually-hidden">YouTube</span></a>
         </li>
       </ul>
-      <p class="page-footer__copyright">Разработано <a class="page-footer__developer-logo" href="https://up.htmlacademy.ru/adaptive/15/">HTML Academy</a></p>
+      <p class="page-footer__copyright">
+        Разработано
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+          <svg class="page-footer__developer-logo" width="26.943" height="34.09">
+            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
     </footer>
     <script src="js/main-nav.js"></script>
+    <script src="js/svgxuse.js" defer></script>
   </body>
 </html>
