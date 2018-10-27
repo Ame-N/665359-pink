@@ -26,6 +26,25 @@
   background-color: @color-grey;
 }
 
+.photo__label {
+  position: relative;
+
+  &::after {
+    .text-small(bold);
+    content: "Панорама дня";
+    position: absolute;
+    box-sizing: border-box;
+    width: 140px;
+    padding: 12px 5px;
+    right: 0;
+    top: -137px;
+    text-align: center;
+    background-color: @color-pink;
+    text-transform: uppercase;
+    color: @color-white;
+  }
+}
+
 .photo__author {
   .text-headers();
   margin: 0;
@@ -113,6 +132,12 @@
     }
   }
 
+  .photo__label {
+    &::after {
+      top: -455px;
+    }
+  }
+
   .photo__text {
     margin-bottom: auto;
 
@@ -163,6 +188,12 @@
     &--dayly {
       padding: 5px 30px 5px 28px;
       min-height: 98px;
+    }
+  }
+
+  .photo__label {
+    &::after {
+      top: -452px;
     }
   }
 
