@@ -10,6 +10,19 @@
 
 .page-footer__logo {
   margin-bottom: 35px;
+
+  &:hover {
+    color: @color-pink;
+  }
+
+  &:active {
+    color: @color-main;
+    opacity: 0.3;
+  }
+
+  &--desktop {
+    display: none;
+  }
 }
 
 .page-footer__social {
@@ -61,6 +74,16 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     padding-top: 12px;
+  }
+
+  .page-footer__logo {
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: inherit;
+    }
   }
 
   .page-footer__copyright {

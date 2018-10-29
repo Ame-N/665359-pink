@@ -64,8 +64,23 @@
 }
 
 .main-nav__logo {
+  color: @color-white;
   width: 75px;
   height: 22px;
+
+  &:hover {
+    color: @color-pink;
+  }
+
+  &:active {
+    color: @color-white;
+    opacity: 0.3;
+  }
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
 }
 
 .main-nav__toggle {
@@ -88,6 +103,7 @@
     fill: @color-pink;
   }
 
+  &:focus,
   &:active {
     fill: @color-pink-30;
   }
@@ -129,6 +145,15 @@
   .main-nav__logo {
     width: 148px;
     height: 45px;
+
+    &--tablet {
+      display: inherit;
+    }
+
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
   }
 }
 
@@ -140,6 +165,17 @@
       & .main-nav__list {
         display: flex;
       }
+    }
+  }
+
+  .main-nav__logo {
+    &--desktop {
+      display: inherit;
+    }
+
+    &--mobile,
+    &--tablet {
+      display: none;
     }
   }
 

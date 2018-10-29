@@ -56,10 +56,6 @@
     display: none;
   }
 
-  &:focus {
-    outline: none;
-  }
-
   &::-webkit-slider-thumb {
     appearance: none;
     margin-top: -8px;
@@ -70,6 +66,7 @@
     border-radius: 50%;
     cursor: pointer;
 
+    &:focus,
     &:active {
       background-color: @color-pink;
     }
